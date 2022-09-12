@@ -1,9 +1,11 @@
-.main{
+
+.main{                           /* parent div  for 5 child div's*/   
     border: 5px solid grey ;
     width: 800px;
     height: 700px;
     position: relative;
 }
+   /*child div's*/   
 .a{
     width: 200px;
     height: 200px;
@@ -25,8 +27,9 @@
     background-color: green;
     border: 2px grey solid;
     position: absolute;
-    top:250px;
-    left: 300px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .d{
     width: 200px;

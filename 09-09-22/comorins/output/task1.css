@@ -1,4 +1,6 @@
-.a{
+   /* Box layout*/   
+  
+   .a{                  
     width: 300px;
     height: 300px;
     border: 10px solid blue;

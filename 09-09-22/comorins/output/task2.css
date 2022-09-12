@@ -1,96 +1,13 @@
-*{
+*{                     /* changing default browser value as per our need*/   
     margin: 0px;
     padding: 0px;
 }
-.main{
+.main{                     /* parent div  for 12 child div's*/   
     width: 1200px;
     
 }
-.a{
-    border: 2px solid skyblue;
-    width: 7.69%;
-    height: 600px;
-    background-color: burlywood;
-    display: inline-block;
-}
-.b{
-    border: 2px solid skyblue;
-    width: 7.69%;
-    height: 600px;
-    background-color: burlywood;
-    display: inline-block;
-}
-.c{
-    border: 2px solid skyblue;
-    width: 7.69%;
-    height: 600px;
-    background-color: burlywood;
-    display: inline-block;
-}
-.d{
-    border: 2px solid skyblue;
-    width: 7.69%;
-    height: 600px;
-    background-color: burlywood;
-    display: inline-block;
-}
-.d{
-    border: 2px solid skyblue;
-    width: 7.69%;
-    height: 600px;
-    background-color: burlywood;
-    display: inline-block;
-}
-.e{
-    border: 2px solid skyblue;
-    width: 7.69%;
-    height: 600px;
-    background-color: burlywood;
-    display: inline-block;
-}
-.f{
-    border: 2px solid skyblue;
-    width: 7.69%;
-    height: 600px;
-    background-color: burlywood;
-    display: inline-block;
-}
-.g{
-    border: 2px solid skyblue;
-    width: 7.69%;
-    height: 600px;
-    background-color: burlywood;
-    display: inline-block;
-}
-.h{
-    border: 2px solid skyblue;
-    width: 7.69%;
-    height: 600px;
-    background-color: burlywood;
-    display: inline-block;
-}
-.i{
-    border: 2px solid skyblue;
-    width: 7.69%;
-    height: 600px;
-    background-color: burlywood;
-    display: inline-block;
-}
-.j{
-    border: 2px solid skyblue;
-    width: 7.69%;
-    height: 600px;
-    background-color: burlywood;
-    display: inline-block;
-}
-.k{
-    border: 2px solid skyblue;
-    width: 7.69%;
-    height: 600px;
-    background-color: burlywood;
-    display: inline-block;
-}
-.l{
+/*child div's*/   
+.a{                           /* common code for all 12 div's*/   
     border: 2px solid skyblue;
     width: 7.69%;
     height: 600px;

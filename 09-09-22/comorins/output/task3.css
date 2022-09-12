@@ -1,6 +1,9 @@
-.main{
+.main{                       /* parent div  for 6 child div's*/   
     position: relative;
+    width:900px;
+    height:450px;
 }
+/*child div's*/   
 .a{
     width: 250px;
     height: 200px;
@@ -15,7 +18,7 @@
     border: 2px blue solid;
     position:absolute;
     top:0px;
-    left: 300px;
+    left: 323px;
 }
 .c{
     width: 250px;
@@ -23,14 +26,14 @@
     border: 2px blue solid;
     position:absolute;
     top:0px;
-    left: 600px;
+    left: 646px;
 }
 .d{
     width: 250px;
     height: 200px;
     border: 2px blue solid;
     position:absolute;
-    top:210px;
+    top:246px;
     left: 0px;
 }
 .e{
@@ -38,14 +41,14 @@
     height: 200px;
     border: 2px blue solid;
     position:absolute;
-    top:210px;
-    left: 300px;
+    top:246px;
+    left: 323px;
 }
 .f{
     width: 250px;
     height: 200px;
     border: 2px blue solid;
     position:absolute;
-    top:210px;
-    left: 600px;
+    top:246px;
+    left: 646px;
 }

@@ -1,0 +1,86 @@
+.main{
+    background-color: black;
+    text-align: center;
+}
+.sub li{
+    display: inline-block;
+    padding: 15px;
+    text-align: center;
+ }  
+.sub a{
+    color: aliceblue;
+    text-decoration: solid;
+}
+p{
+    color: gray;
+}
+
+/* Form */
+
+.form .in{ 
+    border-bottom: 3px solid yellow;
+    border-top: 1px solid #ced4da;
+    border-left: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+    width: 400px;
+    }
+
+label{
+    width: 100px;
+    display: inline-block;
+}
+.submit{
+    background-color: yellow;
+    border-bottom: 3px solid yellow;
+    border-top: 1px solid #ced4da;
+    border-left: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+    padding: 5px;
+    margin-left: 90%;
+    color: aliceblue;
+}
+.color{
+    width: 175px;
+    height: 15px;
+}
+.text{
+    width: 400px;
+    height: 80px;
+    border-bottom: 3px solid yellow;
+    border-top: 1px solid #ced4da;
+    border-left: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+}
+.form{
+    margin: 0  auto;
+    width: 50%;
+}
+
+/* display */
+
+.disp{
+    margin-left: 100px;
+   }
+   .bullet{
+    display: inline-block;
+    color: red;
+    background-color: yellow;
+    width: 500px;
+   }
+   .bullet li{
+    color: black;
+   }
+   .number{
+    display: inline-block;
+    color: red;
+    background-color: yellow;
+    width: 500px;
+   }
+   .number li{
+    color: black;
+   }
+   /* iframe */
+   .frame{
+    width: 700px;
+    height: 500px;
+}

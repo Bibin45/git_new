@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 60px;
+    background-color: black;
+    color: white;
+    margin-bottom: 5px;
+    text-align: center;
+}
+nav{
+    padding: 20px;
+    background-color: gray;
+    color: white;
+    margin-bottom: 5px;
+    text-align: center;
+}
+section{
+    padding-top: 50px;
+    padding-bottom: 200px;
+    background-color: gray;
+    color: white;
+    margin-bottom: 5px;
+    text-align: center;
+}
+footer{
+    padding: 20px;
+    background-color: black;
+    color: white;
+    margin-bottom: 5px;
+    text-align: center;
+}

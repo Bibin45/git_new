@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+/* header starts */
 header{
     padding: 60px;
     background-color: black;
@@ -9,6 +10,8 @@ header{
     margin-bottom: 5px;
     text-align: center;
 }
+/* header ends */
+/* nav starts */
 nav{
     padding: 20px;
     background-color: gray;
@@ -16,17 +19,45 @@ nav{
     margin-bottom: 5px;
     text-align: center;
 }
+/* nav ends */
+/* section starts */
 section{
-    padding-top: 50px;
-    padding-bottom: 200px;
-    background-color: gray;
-    color: white;
+    
+    background-color: darkgray;
     margin-bottom: 5px;
     text-align: center;
+    overflow: hidden;
 }
+.slideshow{
+    padding: 100px;
+    text-align: center;
+    color: white;
+    background-color: rgb(75, 74, 74);
+    margin: 0 10px;
+}
+.grid{
+    
+    margin: 10px;
+    
+}
+.grid .column{
+    width: 31%;
+    height: 250px;
+    margin: 20px;
+    background-color: aliceblue;
+    display: inline-block;
+}
+.grid .column:first-child{
+    margin-left: 0px;
+}
+.grid .column:last-child{
+    margin-right: 0px;
+}
+/* section ends */
+/* footer starts */
 footer{
     padding: 20px;
-    background-color: black;
+    background-color: rgb(75, 74, 74);
     color: white;
     margin-bottom: 5px;
     text-align: center;

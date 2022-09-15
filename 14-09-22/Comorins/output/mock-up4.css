@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 15px;
+    background-color: lightgray;
+}
+h1{
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+
+    text-align: center;
+    background-color: white;           
+ }
+ .p1{
+    
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: white;
+ }
+ .nav{
+    position: relative;
+    background-color: black;
+    color: white;
+    
+}
+ .nav li{
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+}
+.nav .last{
+    position: absolute;
+    right: 0;
+}
+
+.title1 h2{
+    padding: 20px; 
+}
+.title1{
+    background-color: white;
+    margin: 10px 0px;
+    
+}
+.title1 div{
+    background-color: gray;
+    padding: 50px;
+    
+}
+.title1 .p2{
+    padding: 20px;
+}
+.sub1{
+    width: 74.7%;
+    display: inline-block;
+}
+.sub2{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+.ref1{
+    background-color: white;
+    color: black;
+    margin: 10px;
+    padding: 20px ;
+    margin-right: 0;
+}
+.ref1 h2{
+    padding: 10px;
+}
+.ref2 h2{
+    padding: 20px;
+}
+.ref3 h2{
+    padding: 10px;
+}
+.ref2{
+    background-color: white;
+    color: black;
+    margin: 10px;
+    padding: 20px ;
+    margin-right: 0;
+
+}
+.ref3{
+    background-color: white;
+    color: black;
+    margin: 10px;
+    padding: 20px ;
+    margin-right: 0;
+}
+.ref2 p{
+    padding: 25px 0px;
+    background-color: grey;
+   
+}
+.ref1 div{
+    padding: 25px 0px;
+    background-color: grey;
+   
+}
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(180, 178, 178);
+}

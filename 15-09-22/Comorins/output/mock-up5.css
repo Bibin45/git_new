@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+width: 100%;
+
+}    
+
+.logo{
+margin-bottom: 30px;
+background-color: lightgrey;
+}
+.logo h2{
+    display: inline-block;
+    margin-left: 10%;
+}
+.logo ul{
+    display: inline-block;
+    margin-left: 55%;
+}
+ul li{
+    display: inline-block;
+    width: 100px;
+}
+.sub1{
+display: inline-block;
+margin-left: 10%;
+max-width: 20%;
+}
+.sub2{
+display: inline-block;
+padding-left: 150px;
+padding-top: 50px ;
+padding-bottom: 100px ;
+padding-right: 300px ;
+background-color: gray;
+margin-left: 20%;
+
+}
+.grid{
+
+background-color: white;
+width: 80%;
+margin: 0 20%;
+
+}
+.grid .gsub{
+width: 25.7%;
+margin: 0 auto;
+padding: 120px 0px;
+margin: 20px 10px;
+background-color: gray;
+display: inline-block;
+text-align: center;
+}
+.grid .g{
+width: 78%;
+padding: 20px;
+margin: 0 10px;
+background-color: gray;
+margin-bottom: 20px;
+
+}
+.foot ul{
+width: 100%;
+padding: 15px;
+
+display: inline-block;
+background-color: lightgray;
+}
+.foot li{
+display: inline-block;
+margin: 0 50px;
+}
+.foot li :last-child{
+margin-left: 70%;
+}

@@ -39,7 +39,7 @@ body{
 .ref .list{
     position: absolute;
     top: 120px;
-    right: 0;
+    right: 0;   
     max-width: 220px;
     background-color:rgb(255, 0, 242);
     font-size:x-large;

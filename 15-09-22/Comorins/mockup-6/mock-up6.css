@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
+nav ul{
+    background-color: black;
+    color: white;
+    padding: 49px 0px ;
+    text-align: center;
+}
+nav li{
+    
+    display: inline-block;
+    margin-left: 54px;  
+    font-weight: 500;
+    font-family: Roboto;
+    Font-style: Medium;
+    Font-size: 27px;
+
+}
+nav ul li:first-child{
+    margin-left: 0px;
+}
+.picky{
+    display: table;
+}
+.pic{
+    padding: 26px 825px 37px 112px;
+    float: left;
+    display: table-cell;
+}
+.pic img{
+    width: 100px;
+    height: 100px;
+    float: left;
+   
+    
+}
+.contact{
+    vertical-align: middle;
+    margin-top: 3%;
+    text-align: left;
+    display: table-cell;}
+.content{
+    width: 100%;
+    background-color: lightgray;
+    display: inline-block;
+    
+}
+.content .c1{
+    display: inline-block;
+    width: 32%;
+    
+}
+.content .a1{
+    margin-left: 44px;
+}
+.content .c1 img{
+    width: 369px;
+    height: 278px;
+    margin-top: 23px;
+    border: 2px red groove;
+    padding: 12px 16px;
+}
+.content .c1 .plink{
+    color: green;
+    font-size: large;
+    width: 249px;
+    height: 44px;
+    margin-bottom: 13px;
+
+}
+.book img{
+    width:183px;
+    height: 152px;
+    display: inline-block;
+    margin-top: 101px;
+    margin-left: 48px;
+    margin-bottom: 130px;
+}
+.content .c1 h2{
+    width: 332px;
+    height: 45px;
+    margin-top: 72px;
+}
+.content .c1 .ptext{
+    height: 175px;
+    margin-top: 49px;
+    width: 357px;
+    Font-family: Roboto;
+    Font-style: Light;
+    Font-size: 23px;
+    vertical-align: top;
+}
+.bline1{
+    display: inline-block;
+    margin-top: 72px;
+    margin-left: 40px;
+}
+.bline1 img{
+    float: left;
+    width: 202px;
+    height: 170px;
+    border: 1px red solid;
+    padding: 17px 20px;
+    
+}
+.bline1 .p1{
+    Font-family: Roboto;
+    Font-style: Regular;
+    Font-size: 18px;
+    text-align: left;
+   vertical-align: top;
+   color: #8F8F8F;
+   
+   
+}
+.bline1 .p1{
+    width: 40%;
+    height: 31px;
+    vertical-align: top; 
+    display: inline-block; 
+    color: #8F8F8F;
+    
+}
+.bline1 .p2{
+    width: 60%;
+    height: 100px;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 23px;
+    color: #8F8F8F;
+}
+.bline1 .p3{
+    width: 50%;
+    height: 60px;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: px;
+    color: #8F8F8F;
+}
+.bline1 .p4{
+    width: 80%;
+    height: 50px;
+    display: inline-block;
+    color: #8F8F8F;
+}
+.line{
+    width: 755px;
+    margin-left: 40px;
+}
+.line h2{
+    Font-family: Roboto;
+    Font-style: Regular;;
+    Font-size: 43px;
+    color: #8F8F8F;
+}
+.line2 h2{
+    Font-family: Roboto;
+    Font-style: Regular;
+    Font-size: 43px;
+    color: #8F8F8F;
+}
+main{
+  display: table;  
+}
+.main1{
+    width: 60%;
+    display: table-cell;
+    
+}
+.main2{
+    width: 40%;
+    margin-top: 64px;
+    display: table-cell;
+    vertical-align: top;
+    margin-left: 150px;    
+}
+.line2 hr{
+    width: 534px;
+    color: #8F8F8F;
+}
+.bird{
+    display: inline-block;
+}
+.bird img{
+    width:164px ;
+    height: 135px;
+    border: 1px red solid;
+    padding: 15px 19px;
+    margin: 15% 0%;
+}
+.birdc h4{
+    color: #8F8F8F;
+}
+.birdc{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    margin-top: 5%;
+}
+.birdc .p1{
+    
+    vertical-align: top;
+    margin-top: 2%;
+    color: #8F8F8F;
+}
+.birdc .p2{
+    display: block;
+    color: green;
+    margin-top: 30%;
+    text-align: right;
+    
+}
+.mainbird hr{
+      width: 534Px;
+      color: #8F8F8F;
+}
+.blackmain{
+    background-color: black;
+    width: 100%;
+}
+.about h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    color: #B1B1B1;
+}
+.about hr{
+    color: #B1B1B1;
+}
+.aboutimg{
+    display: inline-block;
+}
+.aboutbox{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+    display: inline-block;
+}

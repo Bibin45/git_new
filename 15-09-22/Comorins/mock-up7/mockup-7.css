@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 header{
     width: 100%;
 }
@@ -23,6 +24,9 @@ header{
     display: table-cell;
     vertical-align: middle;
 }
+.navul li:first-child{
+  color: #EC483C;  
+}
 .navul li{
     display: inline-block;
     width: 16%;
@@ -39,7 +43,7 @@ header{
     line-height: 24px;
     color: #FFFFFF;
     width: 143px;
-    height: 37px;
+    height: 50px;
 }
 .banner{
     width: 100%;
@@ -331,7 +335,6 @@ header{
     font-size: 20px;
     line-height: 24px;
     color: #494D56;
-    
     border-radius: 10px;
 }
 .botlist .l1{

@@ -1,0 +1,374 @@
+@media(min-width:575px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: lightgrey;
+    }
+    header{
+        font-size: x-small  ;
+        width: 96%;
+        margin: 0 auto;
+        font-size: small;
+    }
+    section{
+        font-size: smaller;
+        width: 96%;
+        margin: 0 auto;
+        font-size: small;
+    }
+    .head{
+        text-align: center;
+        padding: 3%;
+        background-color: white;
+    }
+    .navul{
+        background-color: black;
+        text-align: center;
+    }
+    .navul li{
+        display: inline-block;
+        color: white;
+        width: 10%;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .navul li:last-child{
+        margin-right: 3%;
+        width: 10%;
+    }
+    .mainsub{
+        display: inline-block;
+        width: 100%;
+    }
+    .sub div{
+        background-color: gray;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 100px;
+        padding-bottom: 100px;
+    }
+    .main{
+        background-color: white;
+        margin: 2%;
+        margin-left: 0;
+    }
+    .sub p{
+        margin: 1% 0;
+    }
+    .sub{
+        width: 96%;
+        margin: 0 auto;
+        padding: 2%;
+    }
+    .main2{
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .about{
+        background-color: white;
+        padding: 3%;
+        margin: 5% 0;
+    }
+    .pop{
+        background-color: white;
+        padding: 3%;
+        margin: 5% 0;
+    }
+    .follow{
+        background-color: white;
+        padding: 3%;
+        margin: 5% 0;
+    }
+    .about div{
+        margin-top: 3%;
+        background-color: gray;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+
+    }
+    .about p{
+        margin: 3% 0;
+    }
+    .pop div p{
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+        background-color: gray;
+
+    }
+    .pop h2{
+        margin: 3% 0;
+    }
+    .follow{
+        padding: 3%;
+    }
+    .follow p{
+        margin: 3% 0;
+    }
+    footer{ 
+        font-size: smaller;
+        background-color: rgb(175, 174, 174);
+        text-align: center;
+        width: 96%;
+        margin: 0 auto;
+        padding: 2% 0;
+    }
+}
+
+
+ /* tab layout */
+ @media(min-width:767px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: lightgrey;
+    }
+    header{
+        width: 96%;
+        margin: 0 auto;
+        font-size: small;
+    }
+    section{
+        width: 96%;
+        margin: 0 auto;
+        font-size: small;
+    }
+    .head{
+        text-align: center;
+        padding: 3%;
+        background-color: white;
+    }
+    .navul{
+        background-color: black;
+        text-align: center;
+    }
+    .navul li{
+        display: inline-block;
+        color: white;
+        width: 10%;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .navul li:last-child{
+        margin-right: 3%;
+        width: 10%;
+    }
+    .mainsub{
+        display: inline-block;
+        width: 74.4%;
+    }
+    .sub div{
+        background-color: gray;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 100px;
+        padding-bottom: 100px;
+    }
+    .main{
+        background-color: white;
+        margin: 2%;
+        margin-left: 0;
+    }
+    .sub p{
+        margin: 1% 0;
+    }
+    .sub{
+        width: 96%;
+        margin: 0 auto;
+        padding: 2%;
+    }
+    .main2{
+        width: 25.1%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .about{
+        background-color: white;
+        padding: 3%;
+        margin: 5% 0;
+    }
+    .pop{
+        background-color: white;
+        padding: 3%;
+        margin: 5% 0;
+    }
+    .follow{
+        background-color: white;
+        padding: 3%;
+        margin: 5% 0;
+    }
+    .about div{
+        margin-top: 3%;
+        background-color: gray;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+
+    }
+    .about p{
+        margin: 3% 0;
+    }
+    .pop div p{
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+        background-color: gray;
+
+    }
+    .pop h2{
+        margin: 3% 0;
+    }
+    .follow{
+        padding: 3%;
+    }
+    .follow p{
+        margin: 3% 0;
+    }
+    footer{ 
+        font-size: small;
+        background-color: rgb(175, 174, 174);
+        text-align: center;
+        width: 96%;
+        margin: 0 auto;
+        padding: 2% 0;
+    }
+ }
+   
+
+
+
+
+
+
+ 
+ /* web layout */
+@media(min-width:1200px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: lightgrey;
+    }
+    header{
+        font-size: larger;
+        width: 96%;
+        margin: 0 auto;
+    }
+    section{
+        width: 96%;
+        margin: 0 auto;
+        font-size: larger;
+    }
+    .head{
+        text-align: center;
+        padding: 3%;
+        background-color: white;
+    }
+    .navul{
+        background-color: black;
+    }
+    .navul li{
+        display: inline-block;
+        color: white;
+        width: 10%;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .navul li:last-child{
+        width: 5%;
+        padding-left: 58%;
+    }
+    .mainsub{
+        display: inline-block;
+        width: 74.4%;
+    }
+    .sub div{
+        background-color: gray;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 100px;
+        padding-bottom: 100px;
+    }
+    .main{
+        background-color: white;
+        margin: 2%;
+        margin-left: 0;
+    }
+    .sub p{
+        margin: 1% 0;
+    }
+    .sub{
+        width: 96%;
+        margin: 0 auto;
+        padding: 2%;
+    }
+    .main2{
+        width: 25.1%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .about{
+        background-color: white;
+        padding: 3%;
+        margin: 5% 0;
+    }
+    .pop{
+        background-color: white;
+        padding: 3%;
+        margin: 5% 0;
+    }
+    .follow{
+        background-color: white;
+        padding: 3%;
+        margin: 5% 0;
+    }
+    .about div{
+        margin-top: 3%;
+        background-color: gray;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+
+    }
+    .about p{
+        margin: 3% 0;
+    }
+    .pop div p{
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+        background-color: gray;
+
+    }
+    .pop h2{
+        margin: 3% 0;
+    }
+    .follow{
+        padding: 3%;
+    }
+    .follow p{
+        margin: 3% 0;
+    }
+    footer{
+        font-size: larger;
+        background-color: rgb(175, 174, 174);
+        text-align: center;
+        width: 96%;
+        margin: 0 auto;
+        padding: 2% 0;
+    }
+
+}

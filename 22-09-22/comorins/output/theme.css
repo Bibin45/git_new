@@ -1,0 +1,37 @@
+.hill img{
+   width:  22%;
+   height:  18%;
+}
+hr{
+    height: 1px;
+    width: 100%;
+    background-color:gray;
+}
+.hill p{
+    color: black;
+}
+.pic{
+    float: left;
+    width: 40%;
+}
+.pic img{
+    width: 90%;
+    height: 90%;
+    border: 1px brown solid;
+    padding: 5%;
+}
+.br{
+    border: none;
+    background-color:gainsboro;
+}
+.book img{
+    width: 100%;
+    height: 100%;
+    border: 1px brown solid;
+    padding: 5%;
+}
+.bookpic img{
+    width:25% ;
+    height: 40%;
+    margin-left: 5%;
+}

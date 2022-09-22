@@ -1,0 +1,24 @@
+.main h1{
+    background-color: rgb(78, 77, 77);
+    padding: 25px;
+    
+}
+.main nav{
+    padding: 15px;
+    padding-left: 150px;
+    background-color:gray;
+}
+.box{
+    padding-top: 100px;
+    padding-bottom: 300px;
+    background-color: lightgrey;
+}
+.box1{
+    padding-top: 100px;
+    padding-bottom: 300px; 
+    background-color: gray
+}
+footer h2{
+    padding: 25px;
+    background-color: rgb(73, 72, 72);
+}

@@ -1,28 +1,63 @@
+/* overall */
+*{
+    font-family: 'Roboto';
+    font-size: large;
+}
+
 .hill img{
    width:  22%;
    height:  18%;
 }
 hr{
-    height: 1px;
-    width: 100%;
+   width: 100%; 
     background-color:gray;
 }
 .hill p{
     color: black;
 }
+.pik{
+    float: left;
+    width: 40%;
+    height: 30;
+}
 .pic{
+    float: left;
+    
+}
+.hei{
+    height: 25%;
+}
+.wid{
+    width: 60% ;
+}
+.pik img{
+    width: 90%;
+    height: 90%;
+    border: 2px silver solid;
+    padding: 5%;
+    margin: 0 auto;
+}
+.pic img{
+    width: 100%;
+    
+    border: 2px silver solid;
+    padding: 2%;
+    margin: 0 auto;
+}
+.photo{
     float: left;
     width: 40%;
 }
-.pic img{
-    width: 90%;
+.photo img{
+    width: 100%;
     height: 90%;
-    border: 1px brown solid;
+    border: 2px silver solid;
     padding: 5%;
 }
 .br{
     border: none;
-    background-color:gainsboro;
+    background-color: #F3F2EE;
+    
 }
 .book img{
     width: 100%;
@@ -34,4 +69,235 @@ hr{
     width:25% ;
     height: 40%;
     margin-left: 5%;
+}
+.pics{
+    height: 100%;
+}
+.pics img{
+    width: 25%;
+    height: 28%;
+}
+
+/* mobile layout */
+@media(min-width:565px){
+    *{
+        font-family: 'Roboto';
+    }
+    .p1{
+        font-weight: 400;
+        font-size: 18px;
+    }
+    .main1{
+        font-weight: 400;
+        font-size: 30px;
+    }
+    .sub1{
+        font-weight: 300;
+        font-size: 16px;
+    }
+    .sub2{
+        font-weight: 400;
+        font-size: 21px;
+    }
+    .main2{
+        font-weight: 400;
+        font-size: 34px;
+        color: #B1B1B1;
+    }
+    .main3{
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .sub3{
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .sub4{
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .main4{
+        color: #B1B1B1;
+
+    }
+    .main4 p{
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 195.19%;
+    }
+    .sub5{
+        color: #D7E8B9;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 195.19%;
+    }
+}
+
+/* tab layout */
+@media(min-width:767px){
+    *{
+        font-family: 'Roboto';
+    }
+    .p1{
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .main1{
+        font-weight: 400;
+        font-size: 32px;
+    }
+    .sub1{
+        font-weight: 300;
+        font-size: 18px;
+    }
+    .sub2{
+        font-weight: 400;
+        font-size: 23px;
+    }
+    .main2{
+        font-weight: 400;
+        font-size: 36px;
+        color: #B1B1B1;
+    }
+    .main3{
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .sub3{
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .sub4{
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .main4{
+        color: #B1B1B1;
+
+    }
+    .main4 p{
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 195.19%;
+    }
+    .sub5{
+        color: #D7E8B9;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 195.19%;
+    }
+    
+}
+
+/* small pc layout */
+@media(min-width:991px){ 
+    *{
+        font-family: 'Roboto';
+    }
+    .p1{
+        font-weight: 400;
+        font-size: 22px;
+    }
+    .main1{
+        font-weight: 400;
+        font-size: 34px;
+    }
+    .sub1{
+        font-weight: 300;
+        font-size: 20px;
+    }
+    .sub2{
+        font-weight: 400;
+        font-size: 25px;
+    }
+    .main2{
+        font-weight: 400;
+        font-size: 40px;
+        color: #B1B1B1;
+    }
+    .main3{
+        font-weight: 400;
+        font-size: 18px;
+    }
+    .sub3{
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .sub4{
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .main4{
+        color: #B1B1B1;
+
+    }
+    .main4 p{
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 195.19%;
+    }
+    .sub5{
+        color: #D7E8B9;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 195.19%;
+    }
+}
+
+/* web layout */
+@media(min-width:1200px){
+    *{
+        font-family: 'Roboto';}
+    header ul a{
+        font-weight: 500;
+        font-size: 27px;
+    }
+    .p1{
+        font-weight: 400;
+        font-size: 24px;
+    }
+    .main1{
+        font-weight: 400;
+        font-size: 38px;
+    }
+    .sub1{
+        font-weight: 300;
+        font-size: 23px;
+    }
+    .sub2{
+        font-weight: 400;
+        font-size: 29px;
+    }
+    .main2{
+        font-weight: 400;
+        font-size: 43px;
+        color: #B1B1B1;
+    }
+    .main3{
+        font-weight: 400;
+            font-size: 20px;
+    }
+    .sub3{
+        font-weight: 400;
+    font-size: 18px;
+    }
+    .sub4{
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .main4{
+        color: #B1B1B1;
+
+    }
+    .main4 p{
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 195.19%;
+    }
+    .sub5{
+        color: #D7E8B9;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 195.19%;
+    }
 }

@@ -3,13 +3,9 @@
     *{
         margin: 0;
         padding: 0;
-    }
-    body{
-        font-size: xx-small;
-        width: 100%;
-        margin: 0 auto;
 
     }
+    
     header{
         width: 100%;
     }
@@ -18,7 +14,7 @@
         top: 0;
         width: 100%;
         background-color: white;
-        padding: 0 5%;
+       
         display: table;
         height: 10px;
         position: sticky; 
@@ -30,6 +26,7 @@
         width: 20%;
     }
     .logo img{
+        margin-left: 5%;
         width: 100%;
         margin: 4% 0;
     }
@@ -127,7 +124,7 @@
         height: 200px;
     }
     .blogbar .b1{
-        border-radius: 10px;
+        
         height: 49px;
         margin: 0 auto;
         width: 70%;
@@ -430,9 +427,7 @@
         margin: 0;
         padding: 0;
     }
-    body{
-        font-size: smaller;
-    }
+    
     header{
         width: 100%;
     }
@@ -441,17 +436,18 @@
         top: 0;
         width: 100%;
         background-color: white;
-        padding: 0 5%;
+        
         display: table;
         height: 10px;
         position: sticky; 
-    
+        
     }   
     .logo{
         display: table-cell;
         margin-left: 100px;
     }
     .logo img{
+        margin-left: 5%;
         width: 50%;
         margin: 4% auto 3%;
     }
@@ -558,7 +554,7 @@
         height: 200px;
     }
     .blogbar .b1{
-        border-radius: 10px;
+        
         height: 49px;
         margin: 0 auto;
         width: 70%;
@@ -862,9 +858,7 @@
         margin: 0;
         padding: 0;
     }
-    body{
-        font-size: medium;
-    }
+   
     header{
         width: 100%;
     }
@@ -873,7 +867,7 @@
         top: 0;
         width: 100%;
         background-color: white;
-        padding: 0 5%;
+        
         display: table;
         height: 10px;
         position: sticky; 
@@ -884,6 +878,7 @@
         margin-left: 100px;
     }
     .logo img{
+        margin-left: 5%;
         width: 50%;
         margin: 4% auto 3%;
     }
@@ -991,7 +986,7 @@
         height: 200px;
     }
     .blogbar .b1{
-        border-radius: 10px;
+        
         height: 49px;
         margin: 0 auto;
         width: 70%;
@@ -1289,10 +1284,9 @@
     *{
         margin: 0;
         padding: 0;
+        
     }
-    body{
-        font-size: larger;
-    }
+    
     header{
         width: 100%;
     }
@@ -1301,7 +1295,7 @@
         top: 0;
         width: 100%;
         background-color: white;
-        padding: 0 5%;
+        
         display: table;
         height: 10px;
         position: sticky; 
@@ -1312,6 +1306,7 @@
         margin-left: 100px;
     }
     .logo img{
+        margin-left: 5%;
         width: 50%;
         margin: 4% auto 3%;
     }
@@ -1421,10 +1416,10 @@
         height: 200px;
     }
     .blogbar .b1{
-        background: #EC483C;
-        border-radius: 10px;
+        
+        
         height: 49px;
-        border-color: #EC483C;
+        
         margin: 0 auto;
         width: 70%;
         font-family: 'Helvetica';
@@ -1432,11 +1427,11 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 154.4%;
-        color: #FFFFFF;
+        color: #EC483C;
     }
     .blogbar .b2{
         border-radius: 10px;
-        border-color: #E5E5E5;
+        
         height: 49px;
         font-family: 'Helvetica';
         font-style: normal;
@@ -1448,7 +1443,6 @@
         margin: 0 auto;
         width: 70%; 
         margin-top: 50%;
-        background-color: #E5E5E5;
     }
     .blogbar input{
         border: 1px solid #494D56;

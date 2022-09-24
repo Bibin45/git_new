@@ -15,6 +15,7 @@ hr{
 .hill p{
     color: black;
 }
+
 .pik{
     float: left;
     width: 40%;
@@ -83,10 +84,7 @@ hr{
     *{
         font-family: 'Roboto';
     }
-    .p1{
-        font-weight: 400;
-        font-size: 18px;
-    }
+    
     .main1{
         font-weight: 400;
         font-size: 30px;
@@ -138,10 +136,7 @@ hr{
     *{
         font-family: 'Roboto';
     }
-    .p1{
-        font-weight: 400;
-        font-size: 20px;
-    }
+    
     .main1{
         font-weight: 400;
         font-size: 32px;
@@ -194,10 +189,7 @@ hr{
     *{
         font-family: 'Roboto';
     }
-    .p1{
-        font-weight: 400;
-        font-size: 22px;
-    }
+    
     .main1{
         font-weight: 400;
         font-size: 34px;
@@ -252,10 +244,7 @@ hr{
         font-weight: 500;
         font-size: 27px;
     }
-    .p1{
-        font-weight: 400;
-        font-size: 24px;
-    }
+    
     .main1{
         font-weight: 400;
         font-size: 38px;

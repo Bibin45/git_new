@@ -53,12 +53,15 @@ h1{
 .title1 .p2{
     padding: 20px;
 }
+.title1{
+    padding: 10px;
+}
 .sub1{
     width: 74.7%;
     display: inline-block;
 }
 .sub2{
-    width: 25%;
+    width: 24.9%;
     display: inline-block;
     vertical-align: top;
     

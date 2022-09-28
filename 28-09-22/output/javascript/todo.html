@@ -9,12 +9,24 @@
 <body>
     <input type="text" id="todo1"/>
     <button onclick="add()">Add</button>
+    <ul id="todo2"> </ul>
     <script>
         let list=[];
         function add(){
             let todo=document.getElementById("todo1").value 
             list.push(todo);
             console.log(list);
+            display(list);
+            document.getElementById("todo1").value=""
+        }
+    
+        function display(list){
+            let whole="";
+            for(let i=0; i<list.length; i++)
+            {
+                whole=whole+"<li>"+list[i]+"</li>"; 
+            }
+            document.getElementById("todo2").innerHTML=whole;
         }
     </script>
 </body>

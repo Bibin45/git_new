@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let resume={
+                    
+                    Name : "Bibin",
+        
+                    education:[
+                                { 
+                                    Schooling:"10th",
+                                    marks:93,
+                                    institute:"Seventhday",
+                                    Location:"Thiruvattar"  
+                                },
+                                { 
+                                    Schooling:"12th",
+                                    marks:89,
+                                    institute:"AHSS",
+                                    Location:"Thiruvattar"  
+                                },
+                                {
+                                    UG:"B.E",   
+                                    Dept:"Mech",
+                                    institute:"St.Xavier's",
+                                    marks:80,
+                                    Location:"Nagercoil"
+                                }
+                            ],
+                    Hobbies:["Mobile Games","Watching Movies","Playing Cricket"],
+                    Skills:["Fast Learner","Team Player"],
+                    Certification :[{
+                        course:"python",
+                        center:"network systems"
+                    }],
+                    Personal_Details:[ {Mobile:9876767788,Email:"aaa@gmail.com",
+                                        DOB:"28.11.1999",
+                                        Address:"cccc",
+                                        Languages_known:["Tamil","English","Hindi"]
+                                        },
+                                        family_details={Father:"aaa",
+                                                        Mother:"bbb",
+                                                        Siblings:1,
+                                                        }
+                                       ],
+                    Experience:"none",
+                    Area_of_Interest:"Software Development"
+                                                   
+                };
+                    
+
+                        for(i=0; i<resume.education.length; i++){
+                            console.log (resume.education[i].institute);
+                            };
+                        
+                        
+                        
+                          
+                    let total=0;
+                    let each=0;
+                     for(i=0; i<resume.education.length; i++){
+                            each=(resume.education[i].marks)
+                            total=total+each;   
+                        }
+                    let result=total/3
+                        console.log(result)
+                
+    </script>
+</body>
+</html>

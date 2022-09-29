@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="id1"/>
+    <button onclick="number()">Check</button>
+    <script>
+        function number(){
+            let a=document.getElementById("id1").value;
+            if (isNaN(a)){
+                console.log("Please Enter a  Number")
+                
+            }
+            else {
+                console.log(a+" is a number")
+                
+            }
+        }
+
+    </script>
+</body>
+</html>

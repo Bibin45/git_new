@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function pluralize(n,a){
+            
+            if (n<=1){
+            console.log(n,a)
+            }
+            else if (a=="sheep"||"geese"){
+                console.log(n,a)
+            }
+            else{
+                console.log(n,a+"s")
+            }
+        }
+        pluralize(5,"cat");
+        pluralize(1,"dog");
+        pluralize(7,"sheep");
+        pluralize(10,"geese");
+    </script>
+</body>
+</html>

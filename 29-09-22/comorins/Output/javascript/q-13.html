@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findLargest(a,b,c){
+            if(a>b&&a>c){
+                console.log(a+' is the largest number')
+            }
+            else if(b>a&&b>c){
+                console.log(b+' is the largest number')
+            }
+            else if(a==b&&b==c){
+                console.log("all numbers are equal")
+            }
+            else{
+                console.log(c+' is the largest number')
+            }
+        }
+        findLargest(10,20,30);
+        findLargest(40,20,30);
+        findLargest(10,80,30);
+        findLargest(10,10,10);
+    </script>
+</body>
+</html>

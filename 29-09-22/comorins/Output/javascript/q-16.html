@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function evalNumbers(a,b,c){
+            if(c=="add"){
+                console.log("Addition of" ,a ,"and",b,"is", a+b)
+            }
+            else if(c=="subtract"){
+                console.log("Subraction of" ,a ,"and",b,"is", a-b)
+            }
+            else if(c=="multiply"){
+                console.log("Multiplication of" ,a ,"and",b,"is", a*b)
+            }
+            else if(c=="divide"){
+                console.log("Division of" ,a ,"and",b,"is", a/b)
+            }
+            else if(c=="modulus"){
+                console.log("Modulus of" ,a ,"and",b,"is", a%b)
+            }
+            else{
+                console.log("Invalid Operation")
+            }
+        };
+        evalNumbers(20,30,"add");
+        evalNumbers(10,30,"subtract");
+        evalNumbers(20,30,"multiply");
+        evalNumbers(20,30,"divide");
+        evalNumbers(20,30,"modulus");
+        evalNumbers(20,30,"transform");
+    </script>
+</body>
+</html>

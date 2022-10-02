@@ -8,20 +8,17 @@
 </head>
 <body>
     <script>
-        let k=234998
-        function digitCount(a){
-            let count=0;
-            let b=0;
-            count=a;
-            while(count!=0){
-                b++;
-                count=parseInt(count/10);
-
+        function digitSum(a){
+            let sum=0;
+            while(a>0){
+                
+                let b=a%10;
+                sum=b+sum;
+                a=parseInt(a/10);
             }
-            console.log(b);
-
-        }  
-        digitCount(k)
+            console.log(sum);
+        }
+        digitSum(444);
     </script>
 </body>
 </html>

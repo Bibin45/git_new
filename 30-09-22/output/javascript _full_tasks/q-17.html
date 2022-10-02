@@ -8,20 +8,19 @@
 </head>
 <body>
     <script>
-        let k=234998
-        function digitCount(a){
-            let count=0;
-            let b=0;
-            count=a;
-            while(count!=0){
-                b++;
-                count=parseInt(count/10);
-
+        function fibanacci(N){
+            let i=0;
+            let j=1;
+            let k;
+            while(i<N){
+                k=i+j;
+                i=j;
+                j=k;
+                console.log(i)
             }
-            console.log(b);
-
-        }  
-        digitCount(k)
+            
+    }
+        fibanacci(300)
     </script>
 </body>
 </html>

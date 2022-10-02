@@ -8,17 +8,21 @@
 </head>
 <body>
     <script>
-        function printPattern(a){
-            for(let i=0;i<=a;i++){
-                for(let j=1;j<=i;j++){
-                    console.log('*')
+        function countLetter(word){
+            let count=0
+            
+            for(let i=0; i<word.length;i++){
+                
+                    
+                   count++;
                     
                 }
-                console.log(" ")
-                
+                console.log(count)
             }
-        }
-    printPattern(10)
+        
+        
+        countLetter("hello")
+        countLetter("hello world")
     </script>
 </body>
 </html>

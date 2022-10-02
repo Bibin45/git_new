@@ -8,20 +8,17 @@
 </head>
 <body>
     <script>
-        let k=234998
-        function digitCount(a){
-            let count=0;
-            let b=0;
-            count=a;
-            while(count!=0){
-                b++;
-                count=parseInt(count/10);
-
+        let arr1=[2,3,6,4,1]
+        let arr2=[1,2,2,3,1]
+        function findProd(a,b){
+            let k=[]
+            for(let i=0;i<a.length;i++){
+                let c= a[i]*b[i]
+                k.push(c)
             }
-            console.log(b);
-
-        }  
-        digitCount(k)
+            console.log(k)
+        }
+        findProd(arr1,arr2)
     </script>
 </body>
 </html>

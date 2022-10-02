@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[1,2,3,4,5,6,7,8,9,10]
+        function binary(array,value){
+            let l=0;
+            let m=0;
+            let r=array.length-1;
+            
+            while (l<=r){
+                let m=Math.floor((l+r)/2);
+                
+                if(value==array[m]){
+                    return m;
+                }
+                else if (value>array[m]){
+                    l=m+1;
+                }
+                else{
+                    r=m-1
+                }
+                
+            }
+            return false
+        }
+        console.log(binary(arr,3))
+        console.log(binary(arr,6))
+        console.log(binary(arr,20))
+    </script>
+</body>
+</html>

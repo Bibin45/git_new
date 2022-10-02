@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findFibanacci(N){
+            let i=0;
+            let j=1;
+            let k;
+            let c=[]
+            while(i<N){
+                k=i+j;
+                i=j;
+                j=k;
+                
+                c.push(i)
+                
+            }
+                
+                if (N==i){
+                    console.log("The index value of the number is "+c.indexOf(i))
+                }
+                else{
+                    console.log("Element not present")
+                }
+                
+            
+        }
+        findFibanacci(3)
+        findFibanacci(89)
+        findFibanacci(100)
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>My To Do List</h2>
+        <p>Double-click an item to mark it complete.</p>
+        <input type="text" id="todoentry"/>
+        <button type="button" onclick="add()">Add</button>
+        <ol id="ollist"></ol>
+        <div class="wrap">
+            <button id="clear" onclick="clear()">Clear Completed</button>
+            <button id="empty" onclick="empty()">Empty List</button>
+            <button id="save" onclick="save()">Save List</button>
+        </div>
+    <script>
+        if(!localStorage.getItem("todolist")){
+            localStorage.setItem("todolist",JSON.stringify([]));
+        }
+        let list =JSON.parse(localStorage.getItem('todolist'))
+        function add(){
+            let item=document.getElementById('todoentry').value;
+            list.push(item)
+            localStorage.setItem('todolist',JSON.stringify(list))  
+            display()
+            document.getElementById("todoentry").value=" "
+        }
+        display()
+        function display(){
+            let ele=""
+            let local_list=JSON.parse(localStorage.getItem('todolist'))
+            for(i=0;i<local_list.length;i++){
+                ele=ele+"<li>"+local_list[i]+"</li>"
+            }
+            document.getElementById("ollist").innerHTML=ele;
+        }
+    </script>
+</body>
+</html>

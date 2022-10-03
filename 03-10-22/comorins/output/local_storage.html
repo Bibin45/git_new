@@ -7,18 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+    <button onclick="test()">check</button>
     <script>
-        let arr1=[2,3,6,4,1]
-        let arr2=[1,2,2,3,1]
-        function findProd(a,b){
-            let k=[];
-            for(let i=0;i<a.length;i++){
-                let c= a[i]*b[i]
-                k.push(c)
-            }
-            console.log(k)
+        
+        function test(){
+            localStorage.setItem('name','bibin')
+            sessionStorage.setItem('age','22')
         }
-        findProd(arr1,arr2)
     </script>
 </body>
 </html>

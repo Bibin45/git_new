@@ -58,7 +58,7 @@ let resume={
 
 }
 let new_resume={
-    skills:[],
+    
     
 };
 function add_detail(key,value,index=null,indexkey=null){
@@ -100,6 +100,12 @@ function add_detail(key,value,index=null,indexkey=null){
         }
         new_resume [key][index][indexkey]=value
     }
+    else if (key=="skills"||key=="area_of_interest"||key=="hobbies"){
+        if (!new_resume[key]){
+            new_resume[key]=[]
+        }
+        new_resume[key][index]=value; 
+    }
     else if (key=='personal_details'){
         if(!new_resume[key]){
             new_resume[key]={};
@@ -107,13 +113,15 @@ function add_detail(key,value,index=null,indexkey=null){
 
         new_resume [key][indexkey]=value
     }
-    // else if(indexkey==languages){
-    //     if(!new_resume[key]){
-    //         new_resume[key][indexkey]=[];
-    //     }
-    //     new_resume[key][indexkey]=[index].value  
+    
+    else if(indexkey=='language'){
+        if(!new_resume[key][indexkey]){
+            new_resume[key][indexkey]=[];
+        }
+        new_resume[key][index][indexkey]=value  
         
-    // }
+    }
+
     else {
         new_resume[key][index]=value;  
     }
@@ -122,3 +130,21 @@ function add_detail(key,value,index=null,indexkey=null){
 function display(){
     document.getElementById("obj").innerHTML=JSON.stringify(new_resume)
 }
+function submit(){
+    if (!localStorage.getItem('myresume')){
+        localStorage.setItem('myresume',JSON.stringify([]))
+    }
+    let a=JSON.parse(localStorage.getItem('myresume'))
+    a.push(new_resume)
+    localStorage.setItem('myresume',JSON.stringify(a))
+}
+function resume_list(){
+    let allresume=JSON.parse(localStorage.getItem('myresume'));
+    let all=" ";
+    for(let i=0;i<allresume.length;i++){
+        
+        all=all+"<li><a href='view.html?name="+allresume[i].name+"'>"+ allresume[i].name+"</a></li>";
+    }
+    document.getElementById('name_list').innerHTML=all;
+}
+

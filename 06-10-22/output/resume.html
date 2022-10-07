@@ -20,12 +20,12 @@
     <label>Objective : </label>
     <input type="text" onkeyup="add_detail('objective',this.value)" /></br></br>
     <label>Skills : </label>
-    <input type="text" onkeyup="add_detail('skills',this.value, 0)" /></br></br>
-    <input type="text" onkeyup="add_detail('skills',this.value, 1)" /></br></br>
-    <input type="text" onkeyup="add_detail('skills',this.value, 2)" /></br></br>
+    <input type="text" onkeyup="add_detail('skills',this.value, 0)" />
+    <input type="text" onkeyup="add_detail('skills',this.value, 1)" />
+    <input type="text" onkeyup="add_detail('skills',this.value, 2)" />
     <input type="text" onkeyup="add_detail('skills',this.value, 3)" /></br></br>
     
-    <label>Education</label>
+    <label>Education : </label>
     <table class="table text-center">
         <thead>
           <tr>
@@ -62,7 +62,7 @@
           
         </tbody>
       </table>
-      <label>Certification</label>
+      <label>Certification : </label>
       <table class="table text-center">
         <thead>
           <tr>
@@ -89,7 +89,7 @@
         </tbody>
       </table>
 
-      <label>Project</label>
+      <label>Project : </label>
       <table class="table text-center">
         <thead>
           <tr>
@@ -116,7 +116,7 @@
         </tbody>
       </table>
 
-      <label>Experience</label>
+      <label>Experience : </label>
       <table class="table text-center">
         <thead>
           <tr>
@@ -143,11 +143,14 @@
           
         </tbody>
       </table>
-      <label>Area of Interest</label>
-      <input type="text" onkeyup="add_detail('area',this.value,1,'role')"/></br></br>
+      <label>Area of Interest : </label>
+      <input type="text" onkeyup="add_detail('area_of_interest',this.value,0)"/>
+      <input type="text" onkeyup="add_detail('area_of_interest',this.value,1)"/></br></br>
+      <label>Hobbies : </label>
+      <input type="text" onkeyup="add_detail('hobbies',this.value,0)"/>
+      <input type="text" onkeyup="add_detail('hobbies',this.value,1)"/></br></br>
 
-
-      <label>Personal Details</label></br></br>
+      <label>Personal Details : </label></br></br>
       <label>Father's Name : </label>
       <input type="text" onkeyup="add_detail('personal_details',this.value,0,'father name')"/></br>
       <label>Mother's Name : </label>
@@ -167,12 +170,16 @@
       <label>Marital Status : </label>
       <input type="text" onkeyup="add_detail('personal_details',this.value,9,'marital status')"/></br>
       <label>Address : </label>
-      <input type="text" onkeyup="add_detail('personal_details',this.value,10,'address')"/></br>
+      <input type="text" onkeyup="add_detail('personal_details',this.value,10,'address')"/></br></br>
+
+      <button type="submit" onclick="submit() " > Submit </button></br></br>
+      <button type="button" onclick="resume_list()">All Resumes</button>
 
     
     <div>
         <code id="obj"></code>
     </div>
+    <ul id="name_list"></ul>
     
 
 

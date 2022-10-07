@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="theme.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body class="container">
+<h1 id ="name">Name</h1>
+<label class="font-weight-bold">E-mail :</label>
+<span id="email"></span><br>
+<label class="font-weight-bold">Phone :</label>
+<span id="phone"></span><br>
+<label class="font-weight-bold">Role :</label>
+<span id="role"></span><br>
+<h5 class="font-weight-bold">Objective : </h5>
+<span id="objective"></span>
+<br><br>
+<h3 class="text-center">Education : </h3>
+    <table class="table text-center border">
+        <thead>
+          <tr>
+            <th >#</th>
+            <th >Courses</th>
+            <th >Year</th>
+            <th >Institute</th>
+            <th >Percentage</th>
+          </tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th >1</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th >2</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th >3</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <!-- certification -->
+      <h3 class="text-center">Certification : </h3>
+      <label class="font-weight-bold">Course : </label>
+      <span></span><br><br>
+      <label class="font-weight-bold">Institute : </label>
+      <span></span><br><br>
+      <label class="font-weight-bold">Duration : </label>
+      <span></span><br><br>
+      
+      <!-- project -->
+      <h3 class="text-center">Project : </h3>
+      <label class="font-weight-bold">Title : </label>
+      <span></span><br><br>
+      <label class="font-weight-bold">Abstract : </label>
+      <span></span><br><br>
+      
+
+      <!-- experience -->
+      <h3 class="text-center">Experience : </h3>
+      <label class="font-weight-bold">Organization : </label>
+      <span></span><br><br>
+      <label class="font-weight-bold">Duration : </label>
+      <span></span><br><br>
+      <label class="font-weight-bold">Role : </label>
+      <span></span><br><br><br><br>
+      <p>
+      <label class="font-weight-bold">Area of Interest : </label>
+        <span></span>
+        <span></span>
+    </p>
+    <p>
+        <label class="font-weight-bold">Hobbies : </label>
+          <span></span>
+          <span></span>
+      </p><br><br>
+      <h3>Personal Details : </h3></br></br>
+      <label class="font-weight-bold"> Father's Name : </label>
+      <span></span><br><br>
+      <label class="font-weight-bold"> Mother's Name : </label>
+      <span></span><br><br>
+      <label class="font-weight-bold"> Sibling's Name : </label>
+      <span></span><br><br>
+      <label class="font-weight-bold"> Age : </label>
+      <span></span><br><br>
+      <label class="font-weight-bold"> Blood Group : </label>
+      <span></span><br><br>
+      <label class="font-weight-bold"> Languages Known : </label>
+      <span></span>
+      <span></span>
+      <span></span><br><br>
+      <label class="font-weight-bold"> Gender : </label>
+      <span></span><br><br>
+      <label class="font-weight-bold"> Marital Status : </label>
+      <span></span><br><br>
+      <label class="font-weight-bold"> Address : </label>
+      <span></span><br><br>
+    <script>
+
+        const k= window.location.search;
+        let c= new URLSearchParams(k)
+        let url=c.get('name')
+        alert("Resume of : "+url)
+
+    </script>
+</body>
+</html>

@@ -8,19 +8,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 <body class="container">
-<h1 id ="name">Name</h1>
-<label class="font-weight-bold">E-mail :</label>
-<span id="email"></span><br>
-<label class="font-weight-bold">Phone :</label>
-<span id="phone"></span><br>
-<label class="font-weight-bold">Role :</label>
-<span id="role"></span><br>
-<h5 class="font-weight-bold">Objective : </h5>
-<span id="objective"></span>
+<h1 id ="myname"></h1>
+<div class="mail">
+<img src=""/>
+<label class="font-weight-bold font">E-mail :</label>
+<span class="font" id="email"></span><br>
+<label class="font-weight-bold font"">Phone :</label>
+<span class="font" id="phone"></span><br>
+</div>
+<label class="font-weight-bold font">Role :</label>
+<span class="font" id="role"></span><br>
+<h5 class="font-weight-bold font">Objective : </h5>
+<span class="font" id="objective"></span>
 <br><br>
-<h3 class="text-center">Education : </h3>
-    <table class="table text-center border">
-        <thead>
+<h3 class="text-center und">Education</h3>
+    <table class="table text-center border p-3 table-striped">
+        <thead class="thead-dark">
           <tr>
             <th >#</th>
             <th >Courses</th>
@@ -33,91 +36,133 @@
         <tbody>
           <tr>
             <th >1</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="course0"></td>
+            <td id="year0"></td>
+            <td id="institute0"></td>
+            <td id="percentage0"></td>
           </tr>
           <tr>
             <th >2</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="course1"></td>
+            <td id="year1"></td>
+            <td id="institute1"></td>
+            <td id="percentage1"></td>
           </tr>
           <tr>
             <th >3</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="course2"></td>
+            <td id="year2"></td>
+            <td id="institute2"></td>
+            <td id="percentage2"></td>
           </tr>
           
         </tbody>
       </table>
       <!-- certification -->
-      <h3 class="text-center">Certification : </h3>
-      <label class="font-weight-bold">Course : </label>
-      <span></span><br><br>
-      <label class="font-weight-bold">Institute : </label>
-      <span></span><br><br>
-      <label class="font-weight-bold">Duration : </label>
-      <span></span><br><br>
-      
+    <div class="row mt-5">
+      <div class="col-6 font-weight-bold card nopad">
+        
+          <h3 class="text-center mt-3 mb-3 und">Certification</h3>
+        <p >Course : 
+          <span id="course4" ></span></p>
+        <p>Institute : 
+          <span id="institute4"></span></p>
+        <p >Duration : 
+          <span id="duration4"></span></p><br><br>
+        <p>Course : 
+          <span id="course5" ></span></p>
+        <p>Institute : 
+          <span id="institute5"></span></p>
+        <p >Duration : 
+          <span id="duration5"></span></p>
+        
+
+      </div>
       <!-- project -->
-      <h3 class="text-center">Project : </h3>
-      <label class="font-weight-bold">Title : </label>
-      <span></span><br><br>
-      <label class="font-weight-bold">Abstract : </label>
-      <span></span><br><br>
-      
+      <div class='col-5 font-weight-bold  card nopad'>
+        <h3 class="text-center mt-3 mb-3 und">Project</h3>
+        <p>Title : 
+        <span id="title1"></span></p>
+        <p>Abstract : 
+        <span id="abstract1"></span></p><br><br>
+        <p>Title : 
+          <span id="title2"></span></p>
+        <p>Abstract : 
+          <span id="abstract2"></span></p>
+      </div>
+    </div>
 
       <!-- experience -->
-      <h3 class="text-center">Experience : </h3>
-      <label class="font-weight-bold">Organization : </label>
-      <span></span><br><br>
-      <label class="font-weight-bold">Duration : </label>
-      <span></span><br><br>
-      <label class="font-weight-bold">Role : </label>
-      <span></span><br><br><br><br>
-      <p>
-      <label class="font-weight-bold">Area of Interest : </label>
-        <span></span>
-        <span></span>
-    </p>
-    <p>
-        <label class="font-weight-bold">Hobbies : </label>
-          <span></span>
-          <span></span>
-      </p><br><br>
-      <h3>Personal Details : </h3></br></br>
-      <label class="font-weight-bold"> Father's Name : </label>
-      <span></span><br><br>
-      <label class="font-weight-bold"> Mother's Name : </label>
-      <span></span><br><br>
-      <label class="font-weight-bold"> Sibling's Name : </label>
-      <span></span><br><br>
-      <label class="font-weight-bold"> Age : </label>
-      <span></span><br><br>
-      <label class="font-weight-bold"> Blood Group : </label>
-      <span></span><br><br>
-      <label class="font-weight-bold"> Languages Known : </label>
-      <span></span>
-      <span></span>
-      <span></span><br><br>
-      <label class="font-weight-bold"> Gender : </label>
-      <span></span><br><br>
-      <label class="font-weight-bold"> Marital Status : </label>
-      <span></span><br><br>
-      <label class="font-weight-bold"> Address : </label>
-      <span></span><br><br>
-    <script>
+      <h3 class="text-center mt-5 und">Experience</h3>
+      <table class="table text-center border p-3 mt-3 mb-5 table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Company</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Role</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td id="company1"></td>
+            <td id="dur1"></td>
+            <td id="role1"></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td id="company2"></td>
+            <td id="dur2"></td>
+            <td id="role2"></td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <div class="card font-weight-bold p-3 mt-3 mb-5 area">
+        <p ><span class="und font">Area of Interest :</span>
+        <span  id="interest1"></span> ,
+        <span id="interest2"></span></p>
+        
+      </div>
+      <div class="card font-weight-bold p-3 area">
+        <p > <span class="und font">Hobbies :</span>
+          <span id="hobbies1"></span> ,
+          <span id="hobbies2"></span></p>
+      </div>
+      <br><br>
+      <div class="card p-3 area">
+        <h3> <span class="und">Personal Details :</span></h3></br></br>
+        <p class="font-weight-bold"> Father's Name : 
+        <span id="father"></span></p>
+        <p class="font-weight-bold"> Mother's Name : 
+        <span id="mother"></span></p>
+        <p class="font-weight-bold"> Sibling's Name : 
+        <span id="sibling"></span></p>
+        <p class="font-weight-bold"> Age : 
+        <span id="age"></span></p>
+        <p class="font-weight-bold"> Blood Group : 
+        <span id="blood"></span></p>
+        <p class="font-weight-bold"> Languages Known : 
+        <span id="lang0"></span>, 
+        <span id="lang1"></span>, 
+        <span id="lang2"></span></p>
+        <p class="font-weight-bold"> Gender : 
+        <span id="gen"></span></p>
+        <p class="font-weight-bold"> Marital Status : 
+        <span id="marital"></span></p>
+        <p class="font-weight-bold"> Address : </label>
+        <span id="address"></span></p>
+      </div>
 
-        const k= window.location.search;
-        let c= new URLSearchParams(k)
-        let url=c.get('name')
-        alert("Resume of : "+url)
 
+
+
+
+
+    <script src="view_script.js">
+      
     </script>
 </body>
 </html>

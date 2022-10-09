@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman';
+}
+body{
+    background-color:lightgrey !important;
+}
+#email{
+    text-decoration:underline;
+    
+}
+.mail{
+    float: right;
+}
+.und{
+    text-decoration: underline;
+}
+.nopad{
+    margin: 0 auto;
+    background-color:gray !important;
+    color: white;
+}
+.area{
+    background-color:rgb(68, 68, 68)!important;
+    color: white;
+}
+.mar{
+    background-color: lightgray !important;
+    
+
+}
+.font{
+    font-size: 23px !important;
+}

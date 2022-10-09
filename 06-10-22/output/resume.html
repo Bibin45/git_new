@@ -5,28 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    <link rel="stylesheet" href="theme.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     
 </head>
-<body>
+<body class="container ">
+  <div class="card p-3 mar ">
     <label>Name : </label>
-    <input type="text" onkeyup="add_detail('name',this.value)" /></br></br>
+    <input class="rounded border-success" type="text" onkeyup="add_detail('name',this.value)" /></br></br>
     <label>Email : </label>
-    <input type="text" onkeyup="add_detail('email',this.value)" /></br></br>
+    <input class="rounded border-success" type="email" onkeyup="add_detail('email',this.value)" /></br></br>
     <label>Phone : </label>
-    <input type="text" onkeyup="add_detail('phone',this.value)" /></br></br>
+    <input class="rounded border-success"type="number" onkeyup="add_detail('phone',this.value)" /></br></br>
     <label>Role : </label>
-    <input type="text" onkeyup="add_detail('role',this.value)" /></br></br>
+    <input class="rounded border-success"type="text" onkeyup="add_detail('role',this.value)" /></br></br>
     <label>Objective : </label>
-    <input type="text" onkeyup="add_detail('objective',this.value)" /></br></br>
+    <input class="rounded border-success"type="text" onkeyup="add_detail('objective',this.value)" /></br></br>
+  
+<!-- skills -->
+
     <label>Skills : </label>
-    <input type="text" onkeyup="add_detail('skills',this.value, 0)" />
-    <input type="text" onkeyup="add_detail('skills',this.value, 1)" />
-    <input type="text" onkeyup="add_detail('skills',this.value, 2)" />
-    <input type="text" onkeyup="add_detail('skills',this.value, 3)" /></br></br>
-    
-    <label>Education : </label>
-    <table class="table text-center">
+    <input class="rounded border-success"type="text" onkeyup="add_detail('skills',this.value, 0)" /><br>
+    <input class="rounded border-success"type="text" onkeyup="add_detail('skills',this.value, 1)" /><br>
+    <input class="rounded border-success"type="text" onkeyup="add_detail('skills',this.value, 2)" /><br>
+    <input class="rounded border-success"type="text" onkeyup="add_detail('skills',this.value, 3)" />
+  </div>
+
+<!-- education -->
+
+    <h3 class="text-center mt-5 mb-5">Education : </h3>
+    <table class="table text-center border ">
         <thead>
           <tr>
             <th >#</th>
@@ -62,8 +70,11 @@
           
         </tbody>
       </table>
-      <label>Certification : </label>
-      <table class="table text-center">
+
+<!-- certification -->
+
+<h3 class="text-center mt-5 mb-5">Certification : </h3>
+      <table class="table text-center border">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -89,8 +100,10 @@
         </tbody>
       </table>
 
-      <label>Project : </label>
-      <table class="table text-center">
+<!-- project -->
+
+<h3 class="text-center mt-5 mb-5">Project : </h3>
+      <table class="table text-center border">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -116,8 +129,10 @@
         </tbody>
       </table>
 
-      <label>Experience : </label>
-      <table class="table text-center">
+<!-- experience -->
+
+<h3 class="text-center mt-5 mb-5">Experience : </h3>
+      <table class="table text-center border">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -143,37 +158,46 @@
           
         </tbody>
       </table>
-      <label>Area of Interest : </label>
-      <input type="text" onkeyup="add_detail('area_of_interest',this.value,0)"/>
-      <input type="text" onkeyup="add_detail('area_of_interest',this.value,1)"/></br></br>
-      <label>Hobbies : </label>
-      <input type="text" onkeyup="add_detail('hobbies',this.value,0)"/>
-      <input type="text" onkeyup="add_detail('hobbies',this.value,1)"/></br></br>
+      <div class="card p-3 mar">
+        <h5 >Area of Interest : </h5>
+        <input class="rounded border-success"type="text" onkeyup="add_detail('area_of_interest',this.value,0)"/><br>
+        <input class="rounded border-success"type="text" onkeyup="add_detail('area_of_interest',this.value,1)"/>
+      </div><br>
+      <div class="card p-3 mar">
+        <h5 >Hobbies : </h5>
+        <input class="rounded border-success"type="text" onkeyup="add_detail('hobbies',this.value,0)"/><br>
+        <input class="rounded border-success"type="text" onkeyup="add_detail('hobbies',this.value,1)"/>
+      </div><br>
 
+      <div class="card p-3 mar">
       <label>Personal Details : </label></br></br>
       <label>Father's Name : </label>
-      <input type="text" onkeyup="add_detail('personal_details',this.value,0,'father name')"/></br>
+      <input class="rounded border-success"type="text" onkeyup="add_detail('personal_details',this.value,0,'father_name')"/></br>
       <label>Mother's Name : </label>
-      <input type="text" onkeyup="add_detail('personal_details',this.value,1,'mother name')"/></br>
+      <input class="rounded border-success"type="text" onkeyup="add_detail('personal_details',this.value,1,'mother_name')"/></br>
       <label>Sibling's Name : </label>
-      <input type="text" onkeyup="add_detail('personal_details',this.value,2,'sibling name')"/></br>
+      <input class="rounded border-success"type="text" onkeyup="add_detail('personal_details',this.value,2,'sibling_name')"/></br>
       <label>Age : </label>
-      <input type="number" onkeyup="add_detail('personal_details',this.value,3,'age')"/></br>
+      <input class="rounded border-success"type="number" id="age" onkeyup="add_detail('personal_details',this.value,3,'age')"/></br>
       <label>Blood Group : </label>
-      <input type="text" onkeyup="add_detail('personal_details',this.value,4,'blood-group')"/></br>
-      <label>Languages : </label>
-      <input type="text" onkeyup="add_detail('personal_details',this.value,5,'language')"/>
-      <input type="text" onkeyup="add_detail('personal_details',this.value,6,'language')"/>
-      <input type="text" onkeyup="add_detail('personal_details',this.value,7,'language')"/></br>
+      <input class="rounded border-success"type="text" onkeyup="add_detail('personal_details',this.value,4,'blood_group')"/></br>
+      <label>Languages Known: </label>
+      <input class="rounded border-success"type="text" onkeyup="add_detail('languages',this.value,0,'language')"/><br>
+      <input class="rounded border-success"type="text" onkeyup="add_detail('languages',this.value,1,'language')"/><br>
+      <input class="rounded border-success"type="text" onkeyup="add_detail('languages',this.value,2,'language')"/></br>
       <label>Gender : </label>
-      <input type="text" onkeyup="add_detail('personal_details',this.value,8,'gender')"/></br>
+      <input class="rounded border-success"type="text" onkeyup="add_detail('personal_details',this.value,8,'gender')"/></br>
       <label>Marital Status : </label>
-      <input type="text" onkeyup="add_detail('personal_details',this.value,9,'marital status')"/></br>
+      <input class="rounded border-success"type="text" onkeyup="add_detail('personal_details',this.value,9,'marital_status')"/></br>
       <label>Address : </label>
-      <input type="text" onkeyup="add_detail('personal_details',this.value,10,'address')"/></br></br>
+      <textarea class="rounded border-success"type="text" onkeyup="add_detail('personal_details',this.value,10,'address')"></textarea></br></br>
 
-      <button type="submit" onclick="submit() " > Submit </button></br></br>
-      <button type="button" onclick="resume_list()">All Resumes</button>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary" onclick="submit() " > Submit </button></br></br>
+      <button type="button" class="btn btn-warning" onclick="resume_list()">Generate Resume</button>
+    </div>
 
     
     <div>

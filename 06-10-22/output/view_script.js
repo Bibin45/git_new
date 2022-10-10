@@ -1,3 +1,9 @@
+window.onload(generate_resume())
+
+
+
+function generate_resume(){
+        
 
         const k= window.location.search;
         let c= new URLSearchParams(k)
@@ -79,4 +85,5 @@
         document.getElementById('address').innerHTML=resume[i].personal_details.address
 
         }}
-        
+
+} 

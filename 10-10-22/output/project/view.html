@@ -8,7 +8,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="container">
+<body >
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary header ">
+        <a class="navbar-brand" href="index.html"><img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"/></a>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              </form>
+              <a href="login.html"><button class="btn btn-light text-primary">Login</button></a>
+            <ul class="navbar-nav  ">
+            <li class="nav-item active">
+              <a class="nav-link" href="cart.html" ><img class="imgsize" src='https://cdn2.iconfinder.com/data/icons/social-icons-32/512/flipkart-512.png'/> Cart<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+    </nav>
+    <div class="container">
     <div class="text-center">
     <p class="font-weight-bolder" id="obj">
 
@@ -24,81 +38,57 @@
 </div>
 <button class="btn btn-warning btn-block">Buy Now</button>
 <br>
-<button class="btn btn-success btn-block">Add To Cart</button><br>
+<button class="btn btn-success btn-block" onclick="cart()">Add To Cart</button><br>
 
+
+</div>
     <script>
         const k= window.location.search;
         let c= new URLSearchParams(k)
         let url=c.get('name')
 
-
+        function save(){
         let new_product=JSON.parse( localStorage.getItem('allproducts'))
         console.log(new_product)
         for(let i=0;i<new_product.length;i++){
-        if (url=='samsung'){
-        document.getElementById('obj').innerHTML=JSON.stringify( new_product[0].name)
-        document.getElementById('obj1').innerHTML=JSON.stringify( new_product[0].price)
-        document.getElementById('obj2').src= new_product[0].image
-        document.getElementById('obj3').innerHTML=JSON.stringify( new_product[0].description)
-        }
-        else if (url=='oppo'){
-        document.getElementById('obj').innerHTML=JSON.stringify( new_product[1].name)
-        document.getElementById('obj1').innerHTML=JSON.stringify( new_product[1].price)
-        document.getElementById('obj2').src= new_product[1].image
-        document.getElementById('obj3').innerHTML=JSON.stringify( new_product[1].description)
-        }
-        else if (url=='asus'){
-        document.getElementById('obj').innerHTML=JSON.stringify( new_product[2].name)
-        document.getElementById('obj1').innerHTML=JSON.stringify( new_product[2].price)
-        document.getElementById('obj2').src= new_product[2].image
-        document.getElementById('obj3').innerHTML=JSON.stringify( new_product[2].description)
-        }
-        else if (url=='sony'){
-        document.getElementById('obj').innerHTML=JSON.stringify( new_product[3].name)
-        document.getElementById('obj1').innerHTML=JSON.stringify( new_product[3].price)
-        document.getElementById('obj2').src= new_product[3].image
-        document.getElementById('obj3').innerHTML=JSON.stringify( new_product[3].description)
-        }
-        else if (url=='light'){
-        document.getElementById('obj').innerHTML=JSON.stringify( new_product[4].name)
-        document.getElementById('obj1').innerHTML=JSON.stringify( new_product[4].price)
-        document.getElementById('obj2').src= new_product[4].image
-        document.getElementById('obj3').innerHTML=JSON.stringify( new_product[4].description)
-        }
-        else if (url=='fridge'){
-        document.getElementById('obj').innerHTML=JSON.stringify( new_product[5].name)
-        document.getElementById('obj1').innerHTML=JSON.stringify( new_product[5].price)
-        document.getElementById('obj2').src= new_product[5].image
-        document.getElementById('obj3').innerHTML=JSON.stringify( new_product[5].description)
-        }
-        else if (url=='watch'){
-        document.getElementById('obj').innerHTML=JSON.stringify( new_product[6].name)
-        document.getElementById('obj1').innerHTML=JSON.stringify( new_product[6].price)
-        document.getElementById('obj2').src= new_product[6].image
-        document.getElementById('obj3').innerHTML=JSON.stringify( new_product[6].description)
-        }
-        else if (url=='game'){
-        document.getElementById('obj').innerHTML=JSON.stringify( new_product[7].name)
-        document.getElementById('obj1').innerHTML=JSON.stringify( new_product[7].price)
-        document.getElementById('obj2').src= new_product[7].image
-        document.getElementById('obj3').innerHTML=JSON.stringify( new_product[7].description)
-        }
-        else if (url=='bag'){
-        document.getElementById('obj').innerHTML=JSON.stringify( new_product[8].name)
-        document.getElementById('obj1').innerHTML=JSON.stringify( new_product[8].price)
-        document.getElementById('obj2').src= new_product[8].image
-        document.getElementById('obj3').innerHTML=JSON.stringify( new_product[8].description)
-        }
-        else if (url=='tv'){
-        document.getElementById('obj').innerHTML=JSON.stringify( new_product[9].name)
-        document.getElementById('obj1').innerHTML=JSON.stringify( new_product[9].price)
-        document.getElementById('obj2').src= new_product[9].image
-        document.getElementById('obj3').innerHTML=JSON.stringify( new_product[9].description)
+        if (url==new_product[i].brand){
+        document.getElementById('obj').innerHTML=JSON.stringify( new_product[i].name)
+        document.getElementById('obj1').innerHTML=JSON.stringify( new_product[i].price)
+        document.getElementById('obj2').src= new_product[i].image
+        document.getElementById('obj3').innerHTML=JSON.stringify( new_product[i].description)
         }
 
-    
-    
+
+        }
+   
     }
+    save()
+
+
+    function cart(){
+        let a=window.location.search
+        let b= new URLSearchParams(a)
+        let url=b.get('name')
+        let cartproduct=JSON.parse(localStorage.getItem('allproducts'))
+        console.log(cartproduct)
+        let m=[];
+        
+        for(let i=0;i<cartproduct.length;i++){
+            if(!localStorage.getItem("cartitem")){
+            localStorage.setItem("cartitem",JSON.stringify([]));
+        }
+          
+        if (url==cartproduct[i].brand){
+            
+            m.push(cartproduct[i])
+            localStorage.setItem('cartitem',JSON.stringify(m)) 
+            
+        
+        }
+        m=JSON.parse( localStorage.getItem('cartitem'))
+        }
+    }
+    
     
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

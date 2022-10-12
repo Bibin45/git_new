@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary header ">
+        <a class="navbar-brand" href="index.html"><img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"/></a>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              </form>
+              <a href="login.html"><button class="btn btn-light text-primary">Login</button></a> 
+            <ul class="navbar-nav  ">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" ><img class="imgsize" src='https://cdn2.iconfinder.com/data/icons/social-icons-32/512/flipkart-512.png'/> Cart<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+    </nav>
+
+
+<ol id="mycartitem"></ol>
+
+
+
+
+<button class="btn btn-primary btn-block font-weight-bolder  "><a class="text-light" href="#">Check Out Cart </a> <span >Total Value - </span><span  id="total"></span></button>
+<br>
+
+
+
+    </div>
+
+
+    <script>
+
+        function show(){
+        let each=''
+        let mycart=JSON.parse(localStorage.getItem('cartitem'))
+        console.log(mycart)
+        for(let i=0;i<mycart.length;i++){    
+        each=each+"<li>"+"<div class='text-center border mb-5 mt-5'>"+"<h3 class='mt-5 mb-5'>"+mycart[i].name+"</h3>"+"<img src="+mycart[i].image+" />"+"<p class='mt-5 mb-5'>"+mycart[i].price+"</p>"+"<p>"+mycart[i].description+"</p>"+"<button class='btn btn-primary' onclick='removeproduct("+i+")'> Remove Item </button>"+"</div>"+"</li>"       
+        }
+        document.getElementById("mycartitem").innerHTML=each;
+        }
+        
+        show()
+        function removeproduct(i){
+          let new_list=JSON.parse(localStorage.getItem('cartitem'))
+          console.log(new_list)
+          new_list.splice(i,1)
+          localStorage.setItem("cartitem",JSON.stringify(new_list))
+          show()
+        }
+        
+        
+        function total(){
+        let mycart=JSON.parse(localStorage.getItem('cartitem'))
+        console.log(mycart)
+        let k=0
+        for(let i=0;i<mycart.length;i++){
+            
+                k=k+mycart[i].rate
+                document.getElementById('total').innerHTML=JSON.stringify(k)   
+            
+        }
+    }
+    total()
+    </script>
+</body>
+</html>

@@ -23,16 +23,45 @@
         </div>
         <div class="text-right">
         <a href="newuser.html" class="text-primary font-weight-bold">New User</a></div>
-        <button class="btn btn-lg btn-primary btn-block " onclick="check()" type="submit">Sign in</button>
-        
+        <a href="" id="move">
+        <button class="btn btn-lg btn-primary btn-block " onclick="check()" type="button">Sign in</button>
+      </a>
       </form> 
       <script>
-        function store(){
-            let email=document.getElementById('mail').value;
-            let pass=document.getElementById('pw').value;
+
+          let email=document.getElementById('mail');
+          let pass=document.getElementById('pw');
 
 
+        
+        function check(){
+          
+          let list=JSON.parse(localStorage.getItem('login'))
+          
+          for(let i=0;i<list.length;i++){
+            if(email.value==list[i].email&&pass.value==list[i].pass){
+             alert("Welcome, You are Successfully Logged In")
+             document.querySelector('#move').setAttribute('href','index.html')
+             localStorage.setItem('users',JSON.stringify(email.value))
+            }
+            
+
+          }
+            
+              
+          
         }
+          
+          
+        
+          
+            
+            
+        
+            
+            
+          
+          
       </script>
 </body>
 </html>

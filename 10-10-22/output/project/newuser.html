@@ -20,7 +20,7 @@
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <input type="text" class="form-control" onkeyup="data('name',this.value)" id="firstName" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
@@ -40,23 +40,31 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">@</span>
                 </div>
-                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                <input type="text" class="form-control" onkeyup="data('user',this.value)" id="username" placeholder="Username" required>
                 <div class="invalid-feedback" style="width: 100%;">
                   Your username is required.
                 </div>
               </div>
             </div>
+
+            <div class="mb-3">
+              <label for="email">Phone Number </label>
+              <input type="number" class="form-control" onkeyup="data('number',this.value)" id="email" placeholder="90xxxxxx">
+              <div class="invalid-feedback">
+                Please enter a valid mobile number
+              </div>
+            </div>
     
             <div class="mb-3">
               <label for="email">Email </label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <input type="email" class="form-control" onkeyup="data('email',this.value)" id="atemail" placeholder="you@example.com">
               <div class="invalid-feedback">
                 Please enter a valid email address
               </div>
             </div>
             <div class="mb-3">
                 <label for="password">Password </label>
-                <input type="password" class="form-control" id="pw" placeholder="password">
+                <input type="password" class="form-control" onkeyup="data('pass',this.value)" id="pw" placeholder="password">
                 <div class="invalid-feedback">
                   Please enter a valid password
                 </div>
@@ -64,7 +72,7 @@
     
             <div class="mb-3">
               <label for="address">Address</label>
-              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+              <input type="text" class="form-control" onkeyup="data('address',this.value)" id="address" placeholder="1234 Main St" required>
               <div class="invalid-feedback">
                 Please enter your shipping address.
               </div>
@@ -75,27 +83,29 @@
       </div>
     </div>
     <script>
-if(!localStorage.getItem("login")){
-            localStorage.setItem("login",JSON.stringify([]));
-        }
-function sub(){
-    
-    let arr=[{myemail:document.getElementById('email').value,
-            mypass:document.getElementById('pw').value}]
-    
-    
-        console.log(arr)
-        
-       
-        localStorage.setItem('login',JSON.stringify(arr)) 
-          
-    
-    
-    
-      
+
+let details={
+
+}
+
+    function data(key,value){
+      details[key]=value
+
     }
 
+function sub(){
+ 
+  
+    if(!localStorage.getItem("login")){
+            localStorage.setItem("login",JSON.stringify([]));
+        }
+      l=JSON.parse( localStorage.getItem('login'))
+      l.push(details)
+      localStorage.setItem('login',JSON.stringify(l))
 
+    }
+
+    
 
 
 

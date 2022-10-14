@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary header ">
+        <a class="navbar-brand" href="index.html"><img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"/></a>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              </form>
+              <ul class="navbar-nav  " id="showus">
+                <li class="nav-item active">
+                    <a class="nav-link" href="cart.html" ><img class="imgsize" src='https://cdn2.iconfinder.com/data/icons/social-icons-32/512/flipkart-512.png'/><button class="btn btn-primary">Cart</button></a>
+                </li>
+              </ul>
+              
+    </nav>
+
+<div class="container">
+    <ol id="mypayitem"></ol>
+
+
+
+
+    <form class="needs-validation">
+       
+          <h2>Fill Up Below Details</h2>
+          
+                
+      
+              
+  
+              <div class="mb-3">
+                <label for="email">Phone Number </label>
+                <input type="number" class="form-control form-inline" onkeyup="data('number',this.value)" id="email" placeholder="90xxxxxx" required>
+                <div class="invalid-feedback">
+                  Please enter a valid mobile number
+                </div>
+              </div>
+      
+              <div class="mb-3">
+                <label for="email">Email </label>
+                <input type="email" class="form-control"  placeholder="you@example.com">
+                <div class="invalid-feedback">
+                  Please enter a valid email address
+                </div>
+              </div>
+              
+      
+              <div class="mb-3">
+                <label for="address">Address</label>
+                <input type="text" class="form-control"  placeholder="1234 Main St" required>
+                <div class="invalid-feedback">
+                  Please enter your shipping address.
+                </div>
+              </div>
+              <div class="mb-3 formsize font-weight-bold">
+                <h4>Payment Details</h4><br>
+                <input type="radio"  name="1"/> Cash on Delivery<br><br>
+                <input type="radio" name="1"/> UPI <input type="text"class="form-control" placeholder="UPI ID" name="1"/> <br>
+                <input type="radio" name="1"/> Card
+                <input type="number"   class="form-control"id="card" placeholder="Card Number"><br>
+                <input type="number"   class="form-control"id="card" placeholder="CCV"><br>
+                <input type="number"   class="form-control"id="card" placeholder="Expiry Date"><br>
+                <div class="invalid-feedback">
+                  Please enter a valid Card Number
+                </div>
+              </div>
+              
+              <button class="btn btn-primary btn-block mt-5" type="submit" onclick="tran()">Place Order</button>
+          </form>
+        
+      </div>
+
+
+    
+
+</div>
+    <script>
+        
+        function show(){
+        let each=''
+        let mypay=[]
+        mypay.push(JSON.parse(localStorage.getItem('payitem')))
+        console.log(mypay)
+        for(let i=0;i<mypay.length;i++){    
+        each=each+"<li>"+"<div class='text-center mb-5 mt-5'>"+"<h3 class='mt-5 mb-5'>"+mypay[i].name+"</h3>"+"<img src="+mypay[i].image+" />"+"<p class='mt-5 mb-5'>"+mypay[i].price+"</p>"+"<p>"+mypay[i].description+"</p>"+"</div>"+"<h5 class='text-primary'>"+' * Delivery charge for this product is = '+mypay[i].rate/20 +"<h5>"+"<h5 class='text-primary'>"+' * GST charge for this product is = '+mypay[i].rate/10 +"<h5>"+"<h5 class='text-danger'>"+' * Total Taxable value for this product is = '+Math.floor(mypay[i].rate*(1.15))+"<h5>"+"</li>"       
+        }
+        document.getElementById("mypayitem").innerHTML=each;
+        }
+        
+        show()
+
+        function tran(){
+            alert("Your Order has been placed, Continue Shopping")
+            window.location.replace('index.html')
+        }
+        function cartcheck(){
+        let each=''
+        let mycart=JSON.parse(localStorage.getItem('cartitem'))
+        console.log(mycart)
+        for(let i=0;i<mycart.length;i++){    
+        each=each+"<li>"+"<div class='text-center border mb-5 mt-5'>"+"<h3 class='mt-5 mb-5'>"+mycart[i].name+"</h3>"+"<img src="+mycart[i].image+" />"+"<p class='mt-5 mb-5'>"+mycart[i].price+"</p>"+"<p>"+mycart[i].description+"</p>"+"<button class='btn btn-primary' onclick='removeproduct("+i+")'> Remove Item </button>"+"</div>"+"</li>"       
+        }
+        document.getElementById("mypayitem").innerHTML=each;
+        }
+
+
+
+
+        
+//   form validation  //    
+(function () {
+  'use strict'
+
+  window.addEventListener('load', function () {
+    
+    var forms = document.getElementsByClassName('needs-validation')
+
+    Array.prototype.filter.call(forms, function (form) {
+      form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+  }, false)
+})()
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  
+</body>
+</html>

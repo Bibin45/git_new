@@ -29,20 +29,21 @@
       </form> 
       <script>
 
-          let email=document.getElementById('mail');
-          let pass=document.getElementById('pw');
 
 
         
         function check(){
           
+          let email=document.getElementById('mail').value;
+          let pass=document.getElementById('pw').value;
+          
           let list=JSON.parse(localStorage.getItem('login'))
           
           for(let i=0;i<list.length;i++){
-            if(email.value==list[i].email&&pass.value==list[i].pass){
+            if(email==list[i].email&&pass==list[i].pass){
              alert("Welcome, You are Successfully Logged In")
              document.querySelector('#move').setAttribute('href','index.html')
-             localStorage.setItem('users',JSON.stringify(email.value))
+             localStorage.setItem('users',JSON.stringify(email))
             }
             
 

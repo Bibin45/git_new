@@ -17,7 +17,7 @@
               </form>
               <ul class="navbar-nav  " id="showus">
                 <li class="nav-item active">
-                    <a class="nav-link" href="cart.html" ><img class="imgsize" src='https://cdn2.iconfinder.com/data/icons/social-icons-32/512/flipkart-512.png'/><button class="btn btn-primary">Cart</button></a>
+                    <a class="nav-link" href="cart.html" ><button class="btn btn-primary font-weight-bold "><img class="imgsize" src='https://cdn2.iconfinder.com/data/icons/social-icons-32/512/flipkart-512.png'/><br>Cart</button></a>
                 </li>
               </ul>
               <ul class="navbar-nav">
@@ -29,7 +29,7 @@
     <p class="font-weight-bolder" id="obj">
 
     </p>
-    <p><img  id='obj2' src=" "/></p>
+    <p><img  id='obj2' src=" " class="imgwid"/></p>
     <p id="obj1">
 
     </p>
@@ -91,48 +91,52 @@
 
 
     
-    let login_user=JSON.parse(localStorage.getItem('users'))
-        let signup_user=JSON.parse(localStorage.getItem('login'))
-        console.log(signup_user)
-        for(let i=0;i<signup_user.length;i++){
-          let a='';
-          let b='';
-          if(login_user==signup_user[i].email){
-            console.log(login_user)
-            
-          a=a+"<li><a class='nav-link' href='login.html'><button class='btn text-primary  font-weight-bold p-0' onclick='delete_log("+i+")'>"+"Logout"+"</button></a></li>"
-          document.getElementById('home').innerHTML=a
-          
-         
-        console.log(users)
-        }
+    let login_user=''
 
-        
-        else{
-            b=b+"<li><a class='nav-link' href='login.html''><button class='btn text-primary font-weight-bold p-0'>"+"Login"+"</button></a></li>"
-            document.getElementById('home').innerHTML=b
-          
-          }
-          
-          
+login_user=JSON.parse(localStorage.getItem('users'))
+ let signup_user=JSON.parse(localStorage.getItem('login'))
+ console.log(signup_user)
+ for(let i=0;i<signup_user.length;i++){
+   let a='';
+   let b='';
+   if(login_user==signup_user[i].email){
+     console.log(login_user)
+     
+   a=a+"<li><a class='nav-link' href='login.html'><button class='btn text-primary font-weight-bold p-0' onclick='delete_log("+i+")'>"+"Logout"+"</button></a></li>"
+   document.getElementById('home').innerHTML=a
+   
+   
+ break
+ }
 
-        }
-    function delete_log(i){
-    
-    let new_list=[]
-    new_list.push(login_user)
-    console.log(new_list)
-    new_list.splice(i,new_list.length)
-    localStorage.setItem("users",JSON.stringify(new_list))
+ 
+ else{
+     b=b+"<li><a class='nav-link' href='login.html''><button class='btn text-primary  font-weight-bold p-0'>"+"Login"+"</button></a></li>"
+     document.getElementById('home').innerHTML=b
+   
+   }
+   
+   
 
-    }
+ }
+ 
+function delete_log(i){
+
+let new_list=[]
+new_list.push(login_user)
+console.log(new_list)
+new_list.splice(0,new_list.length)
+localStorage.setItem("users",JSON.stringify(new_list))
+alert('You have Logged out now')
+
+}
         
 
 //     adding to place order
 
     function payment(){
         let payproduct=JSON.parse(localStorage.getItem('allproducts'))
-        // console.log(payproduct)
+        
         let m=[];
         
         for(let i=0;i<payproduct.length;i++){

@@ -18,7 +18,7 @@
           
             <ul class="navbar-nav  " id="showus">
             <li class="nav-item active">
-              <a class="nav-link" href="cart.html" ><img class="imgsize" src='https://cdn2.iconfinder.com/data/icons/social-icons-32/512/flipkart-512.png'/><button class="btn btn-primary">Cart</button></a>
+              <a class="nav-link" href="cart.html" ><button class="btn btn-primary font-weight-bold "><img class="imgsize" src='https://cdn2.iconfinder.com/data/icons/social-icons-32/512/flipkart-512.png'/><br>Cart</button></a>
             </li>
           </ul>
           <ul class="navbar-nav" >
@@ -230,9 +230,9 @@ let product=[{        name:'SAMSUNG Galaxy S21 FE 5G (Lavender, 256 GB)  (12 GB 
         localStorage.setItem('allproducts',JSON.stringify(product))
         }
 
+        let login_user=''
 
-
-        let login_user=JSON.parse(localStorage.getItem('users'))
+       login_user=JSON.parse(localStorage.getItem('users'))
         let signup_user=JSON.parse(localStorage.getItem('login'))
         console.log(signup_user)
         for(let i=0;i<signup_user.length;i++){
@@ -245,7 +245,7 @@ let product=[{        name:'SAMSUNG Galaxy S21 FE 5G (Lavender, 256 GB)  (12 GB 
           document.getElementById('home').innerHTML=a
           
           
-        console.log(users)
+          break
         }
 
         
@@ -264,7 +264,7 @@ let product=[{        name:'SAMSUNG Galaxy S21 FE 5G (Lavender, 256 GB)  (12 GB 
     let new_list=[]
     new_list.push(login_user)
     console.log(new_list)
-    new_list.splice(i,new_list.length)
+    new_list.splice(0,new_list.length)
     localStorage.setItem("users",JSON.stringify(new_list))
     alert('You have Logged out now')
 

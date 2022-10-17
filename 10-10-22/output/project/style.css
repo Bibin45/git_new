@@ -1,6 +1,6 @@
 .imgsize{
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 50px;
 }
 .header{
     justify-content: center !important;
@@ -12,6 +12,10 @@
 .imgheight{
     width: 100% !important;
     height: 250px !important;;
+}
+.imgwid{
+    width:  280px!important;
+    height: 280px !important;
 }
 .formsize{
     width: 100% !important;

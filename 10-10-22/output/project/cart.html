@@ -31,7 +31,7 @@
 
 
 
-<button class="btn btn-primary btn-block font-weight-bolder  " onclick="cartcheck()"><a class="text-light" href="#">Check Out Cart </a> <span >Total Value - </span><span  id="total"></span></button>
+<button class="btn btn-primary btn-block font-weight-bolder  " onclick="cartcheck()"><a class="text-warning border p-1" href="payment.html?name=cart">Check Out Cart </a><br> <span >Total Value - </span><span  id="total"></span></button>
 <br>
 
 
@@ -117,6 +117,12 @@ alert('You have Logged out now')
 
 
 function cartcheck(){
+        let each=''
+        let mycart=JSON.parse(localStorage.getItem('cartitem'))
+        console.log(mycart)
+        for(let i=0;i<mycart.length;i++){    
+        each=each+"<li>"+"<div class='text-center border mb-5 mt-5'>"+"<h3 class='mt-5 mb-5'>"+mycart[i].name+"</h3>"+"<img src="+mycart[i].image+" class='imgwid'/>"+"<p class='mt-5 mb-5'>"+mycart[i].price+"</p>"+"<p>"+mycart[i].description+"</p>"+"<button class='btn btn-primary' onclick='removeproduct("+i+")'> Remove Item </button>"+"</div>"+"</li>"       
+        }
 
 }
 

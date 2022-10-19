@@ -98,7 +98,34 @@
 
 </div>
     <script>
+
+
+      const l= window.location.search;
+        let c= new URLSearchParams(l)
+        let url=c.get('name')
+       
+        function check_buy_cart(){
         
+
+        if(url=='cart'){
+        function showcart(){
+        let each=''
+        let carpay=[]
+        carpay=JSON.parse(localStorage.getItem('cartitem'))
+        console.log(carpay)
+        for(let i=0;i<carpay.length;i++){    
+        each=each+"<li>"+"<div class='text-center mb-5 mt-5'>"+"<h3 class='mt-5 mb-5'>"+carpay[i].name+"</h3>"+"<img src="+carpay[i].image+" class='imgwid' />"+"<p class='mt-5 mb-5'>"+carpay[i].price+"</p>"+"<p>"+carpay[i].description+"</p>"+"</div>"+"<h5 class='text-primary'>"+' * Delivery charge for this product is = ₹ '+carpay[i].rate/20 +"<h5>"+"<h5 class='text-primary'>"+' * GST charge for this product is = ₹ '+carpay[i].rate/10 +"<h5>"+"<h5 class='text-danger'>"+' * Total Taxable value for this product is = ₹ '+Math.floor(carpay[i].rate*(1.15))+"<h5>"+"</li>"       
+        }
+        document.getElementById("mypayitem").innerHTML=each;
+        }
+        
+        showcart()
+
+        
+        }
+        
+        
+        else{
         function show(){
         let each=''
         let mypay=[]
@@ -111,13 +138,15 @@
         }
         
         show()
-
+        
+      }
+    }
         function tran(){
             alert("Your Order has been placed, Continue Shopping")
             window.location.replace('index.html')
         }
         
-
+check_buy_cart()
 
 
 

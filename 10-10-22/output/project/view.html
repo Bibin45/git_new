@@ -138,19 +138,20 @@ alert('You have Logged out now')
         login_user=JSON.parse(localStorage.getItem('users'))
         let signup_user=JSON.parse(localStorage.getItem('login'))
         console.log(signup_user)
-        for(let i=0;i<signup_user.length;i++){
+        // for(let i=0;i<signup_user.length;i++){
             
-            if(login_user!=signup_user[i].email){
+        //     if(login_user!=signup_user[i].email){
                 
-                alert('Login First')
-                window.location.replace('login.html')
+        //         // alert('Login First')
+        //         window.location.replace('login.html')
 
                 
-            }
-            break
-        }
+        //     }
+        //     break
+        // }
         for(let i=0;i<signup_user.length;i++){
             if (login_user==signup_user[i].email){
+                alert("Are you Sure")
             let payproduct=JSON.parse(localStorage.getItem('allproducts'))
         
             let m=[];
@@ -171,6 +172,15 @@ alert('You have Logged out now')
             }
             console.log(m)
             window.location.replace('payment.html')
+            break
+        }
+        else if (login_user!=signup_user[i].email){
+            
+            window.location.replace('login.html')
+            
+            
+            
+            
         }
     }
     

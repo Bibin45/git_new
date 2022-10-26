@@ -38,7 +38,7 @@
 
     </p>
 </div>
-<a href="payment.html"><button class="btn btn-warning btn-block" onclick="payment()">Buy Now</button></a>
+<button class="btn btn-warning btn-block" onclick="payment()">Buy Now</button>
 <br>
 <button class="btn btn-success btn-block" onclick="cart()">Add To Cart</button><br>
 
@@ -135,26 +135,47 @@ alert('You have Logged out now')
 //     adding to place order
 
     function payment(){
-        let payproduct=JSON.parse(localStorage.getItem('allproducts'))
+        login_user=JSON.parse(localStorage.getItem('users'))
+        let signup_user=JSON.parse(localStorage.getItem('login'))
+        console.log(signup_user)
+        for(let i=0;i<signup_user.length;i++){
+            
+            if(login_user!=signup_user[i].email){
+                
+                alert('Login First')
+                window.location.replace('login.html')
+
+                
+            }
+            break
+        }
+        for(let i=0;i<signup_user.length;i++){
+            if (login_user==signup_user[i].email){
+            let payproduct=JSON.parse(localStorage.getItem('allproducts'))
         
-        let m=[];
+            let m=[];
         
-        for(let i=0;i<payproduct.length;i++){
+            for(let i=0;i<payproduct.length;i++){
             if(!localStorage.getItem("payitem")){
             localStorage.setItem("payitem",JSON.stringify([]));
-        }
+            }
           
-        if (url==payproduct[i].brand){
+            if (url==payproduct[i].brand){
             m=payproduct[i]
             
             localStorage.setItem('payitem',JSON.stringify(m)) 
             
         
+            }
+            m=JSON.parse( localStorage.getItem('payitem'))
+            }
+            console.log(m)
+            window.location.replace('payment.html')
         }
-        m=JSON.parse( localStorage.getItem('payitem'))
-        }
-       console.log(m)
     }
+    
+    }
+    
 
     
     </script>

@@ -88,7 +88,7 @@
               </div>
             </div>
               
-              <button class="btn btn-primary btn-block mt-5" type="submit" >Place Order</button>
+              <button class="btn btn-primary btn-block mt-5" type="submit" >Place Order<span> Total Value - ₹ </span><span id="total"></span></button>
           </form>
         
       </div>
@@ -104,6 +104,9 @@
         let c= new URLSearchParams(l)
         let url=c.get('name')
        
+// displaying items
+
+        
         function check_buy_cart(){
         
 
@@ -148,7 +151,35 @@
         
 check_buy_cart()
 
+// total value for cart and buy now
 
+function total(){
+  if (url=='cart'){
+        let mycart=JSON.parse(localStorage.getItem('cartitem'))
+        // console.log(mycart)
+        let k=0
+        for(let i=0;i<mycart.length;i++){
+            
+                k=k+Math.floor(mycart[i].rate*(1.15))
+                
+                document.getElementById('total').innerHTML=JSON.stringify(k)   
+            
+        }
+      }
+      else{
+        let newcart=JSON.parse(localStorage.getItem('payitem'))
+        console.log(newcart)
+        let k=0
+        
+            
+                k=k+Math.floor(newcart.rate*(1.15))
+                
+                document.getElementById('total').innerHTML=JSON.stringify(k)   
+            
+        
+      }
+    }
+    total()
 
         
 

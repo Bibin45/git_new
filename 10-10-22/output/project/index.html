@@ -22,7 +22,7 @@
             </li>
           </ul>
           <ul class="navbar-nav" >
-            <li class="nav-item active"> <a href="login.html"><button class="btn btn-light p-0 " id="home"></button></a></li>
+            <li class="nav-item active"> <a href="login.html"><button class="btn text-primary font-weight-bold p-0 " id="home"></button></a></li>
            </ul>
           
     </nav>
@@ -241,7 +241,7 @@ let product=[{        name:'SAMSUNG Galaxy S21 FE 5G (Lavender, 256 GB)  (12 GB 
           if(login_user==signup_user[i].email){
             console.log(login_user)
             
-          a=a+"<li><a class='nav-link' href='login.html'><button class='btn text-primary font-weight-bold p-0' onclick='delete_log("+i+")'>"+"Logout"+"</button></a></li>"
+          a=a+"<li><a class='nav-link' href='login.html'><button class='btn btn-light text-primary font-weight-bold ' onclick='delete_log("+i+")'>"+"Logout"+"</button></a></li>"
           document.getElementById('home').innerHTML=a
           
           
@@ -250,7 +250,7 @@ let product=[{        name:'SAMSUNG Galaxy S21 FE 5G (Lavender, 256 GB)  (12 GB 
 
         
         else{
-            b=b+"<li><a class='nav-link' href='login.html''><button class='btn text-primary  font-weight-bold p-0'>"+"Login"+"</button></a></li>"
+            b=b+"<li><a class='nav-link' href='login.html''><button class='btn btn-light  text-primary  font-weight-bold '>"+"Login"+"</button></a></li>"
             document.getElementById('home').innerHTML=b
           
           }

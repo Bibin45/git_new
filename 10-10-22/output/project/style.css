@@ -23,3 +23,7 @@
     padding: 15px !important;
     margin: 0 ,auto; 
 }
+.forhover img:hover{
+    width: 105% !important;
+    height: 300px !important;
+}

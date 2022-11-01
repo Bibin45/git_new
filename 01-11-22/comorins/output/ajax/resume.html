@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+    <body class="container ">
+        <div class="card p-3 mar ">
+          <label>Name : </label>
+          <input class="border-rounded" type="text" onkeyup="add_detail('name',this.value)" /></br></br>
+          <label>Email : </label>
+          <input class=" border-rounded" type="email" onkeyup="add_detail('email',this.value)" /></br></br>
+          <label>Phone : </label>
+          <input class=" border-rounded"type="number" onkeyup="add_detail('phone',this.value)" /></br></br>
+          <label>Role : </label>
+          <input class=" border-rounded"type="text" onkeyup="add_detail('role',this.value)" /></br></br>
+          <label>Objective : </label>
+          <input class=" border-rounded"type="text" onkeyup="add_detail('objective',this.value)" /></br></br>
+        
+      <!-- skills -->
+      
+          <label>Skills : </label>
+          <input class=" border-rounded"type="text" onkeyup="add_detail('skills',this.value, 0)" /><br>
+          <input class=" border-rounded"type="text" onkeyup="add_detail('skills',this.value, 1)" /><br>
+          <input class=" border-rounded"type="text" onkeyup="add_detail('skills',this.value, 2)" /><br>
+          <input class=" border-rounded"type="text" onkeyup="add_detail('skills',this.value, 3)" />
+        </div>
+      
+      <!-- education -->
+      
+          <h3 class="text-center mt-5 mb-5">Education : </h3>
+          <table class="table text-center border ">
+              <thead>
+                <tr>
+                  <th >#</th>
+                  <th >Courses</th>
+                  <th >Year</th>
+                  <th >Institute</th>
+                  <th >Percentage</th>
+                </tr>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th >1</th>
+                  <td><input type="text" onkeyup="add_detail('education',this.value,0,'course')"/></td>
+                  <td><input type="number" onkeyup="add_detail('education',this.value,0,'year')"/></td>
+                  <td><input type="text" onkeyup="add_detail('education',this.value,0,'institute')"/></td>
+                  <td><input type="number" onkeyup="add_detail('education',this.value,0,'percentage')"/></td>
+                </tr>
+                <tr>
+                  <th >2</th>
+                  <td><input type="text" onkeyup="add_detail('education',this.value,1,'course')"/></td>
+                  <td><input type="number" onkeyup="add_detail('education',this.value,1,'year')"/></td>
+                  <td><input type="text" onkeyup="add_detail('education',this.value,1,'institute')"/></td>
+                  <td><input type="number" onkeyup="add_detail('education',this.value,1,'percentage')"/></td>
+                </tr>
+                <tr>
+                  <th >3</th>
+                  <td><input type="text" onkeyup="add_detail('education',this.value,2,'course')"/></td>
+                  <td><input type="number" onkeyup="add_detail('education',this.value,2,'year')"/></td>
+                  <td><input type="text" onkeyup="add_detail('education',this.value,2,'institute')"/></td>
+                  <td><input type="number" onkeyup="add_detail('education',this.value,2,'percentage')"/></td>
+                </tr>
+                
+              </tbody>
+            </table>
+      
+      <!-- certification -->
+      
+      <h3 class="text-center mt-5 mb-5">Certification : </h3>
+            <table class="table text-center border">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Courses</th>
+                  <th scope="col">Institute</th>
+                  <th scope="col">Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td><input type="text" onkeyup="add_detail('certification',this.value,0,'course')"/></td>
+                  <td><input type="text" onkeyup="add_detail('certification',this.value,0,'institute')"/></td>
+                  <td><input type="text" onkeyup="add_detail('certification',this.value,0,'duration')"/></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td><input type="text" onkeyup="add_detail('certification',this.value,1,'course')"/></td>
+                  <td><input type="text" onkeyup="add_detail('certification',this.value,1,'institute')"/></td>
+                  <td><input type="text" onkeyup="add_detail('certification',this.value,1,'duration')"/></td>
+                </tr>
+                
+              </tbody>
+            </table>
+      
+      <!-- project -->
+      
+      <h3 class="text-center mt-5 mb-5">Project : </h3>
+            <table class="table text-center border">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Abstrsct</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td><input type="text" onkeyup="add_detail('project',this.value,0,'title')"/></td>
+                  <td><input type="text" onkeyup="add_detail('project',this.value,0,'abstract')"/></td>
+                  
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td><input type="text" onkeyup="add_detail('project',this.value,1,'title')"/></td>
+                  <td><input type="text" onkeyup="add_detail('project',this.value,1,'abstract')"/></td>
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+      
+      <!-- experience -->
+      
+      <h3 class="text-center mt-5 mb-5">Experience : </h3>
+            <table class="table text-center border">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Company</th>
+                  <th scope="col">Duration</th>
+                  <th scope="col">Role</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td><input type="text" onkeyup="add_detail('experience',this.value,0,'company')"/></td>
+                  <td><input type="text" onkeyup="add_detail('experience',this.value,0,'duration')"/></td>
+                  <td><input type="text" onkeyup="add_detail('experience',this.value,0,'role')"/></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td><input type="text" onkeyup="add_detail('experience',this.value,1,'company')"/></td>
+                  <td><input type="text" onkeyup="add_detail('experience',this.value,1,'duration')"/></td>
+                  <td><input type="text" onkeyup="add_detail('experience',this.value,1,'role')"/></td>
+                </tr>
+                
+              </tbody>
+            </table>
+            <div class="card p-3 mar">
+              <h5 >Area of Interest : </h5>
+              <input class=" border-rounded"type="text" onkeyup="add_detail('area_of_interest',this.value,0)"/><br>
+              <input class=" border-rounded"type="text" onkeyup="add_detail('area_of_interest',this.value,1)"/>
+            </div><br>
+            <div class="card p-3 mar">
+              <h5 >Hobbies : </h5>
+              <input class=" border-rounded"type="text" onkeyup="add_detail('hobbies',this.value,0)"/><br>
+              <input class=" border-rounded"type="text" onkeyup="add_detail('hobbies',this.value,1)"/>
+            </div><br>
+      
+            <div class="card p-3 mar">
+            <label>Personal Details : </label></br></br>
+            <label>Father's Name : </label>
+            <input class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,0,'father_name')"/></br>
+            <label>Mother's Name : </label>
+            <input class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,1,'mother_name')"/></br>
+            <label>Sibling's Name : </label>
+            <input class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,2,'sibling_name')"/></br>
+            <label>Age : </label>
+            <input class=" border-rounded"type="number" id="age" onkeyup="add_detail('personal_details',this.value,3,'age')"/></br>
+            <label>Blood Group : </label>
+            <input class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,4,'blood_group')"/></br>
+            <label>Languages Known: </label>
+            <input class=" border-rounded"type="text" onkeyup="add_detail('languages',this.value,0,'language')"/><br>
+            <input class=" border-rounded"type="text" onkeyup="add_detail('languages',this.value,1,'language')"/><br>
+            <input class=" border-rounded"type="text" onkeyup="add_detail('languages',this.value,2,'language')"/></br>
+            <label>Gender : </label>
+            <input class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,8,'gender')"/></br>
+            <label>Marital Status : </label>
+            <input class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,9,'marital_status')"/></br>
+            <label>Address : </label>
+            <textarea class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,10,'address')"></textarea></br></br>
+      
+          </div>
+      
+          <div class="text-center">
+        
+            <button type="button" class="btn btn-primary" id='apinew'>API Call</button>
+          </div>
+      
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+        let new_resume={}
+
+function add_detail(key,value,index=null,indexkey=null){
+    if(index==null){ 
+    new_resume[key]=value;}
+    else if (key=='education'){
+        if(!new_resume[key]){
+            new_resume[key]=[];
+        }
+        if(!new_resume[key][index]){
+            new_resume[key][index]={}
+        }
+        new_resume [key][index][indexkey]=value
+    }
+    else if (key=='certification'){
+        if(!new_resume[key]){
+            new_resume[key]=[];
+        }
+        if(!new_resume[key][index]){
+            new_resume[key][index]={}
+        }
+        new_resume [key][index][indexkey]=value
+    }
+    else if (key=='project'){
+        if(!new_resume[key]){
+            new_resume[key]=[];
+        }
+        if(!new_resume[key][index]){
+            new_resume[key][index]={}
+        }
+        new_resume [key][index][indexkey]=value
+    }
+    else if (key=='experience'){
+        if(!new_resume[key]){
+            new_resume[key]=[];
+        }
+        if(!new_resume[key][index]){
+            new_resume[key][index]={}
+        }
+        new_resume [key][index][indexkey]=value
+    }
+    else if (key=="skills"||key=="area_of_interest"||key=="hobbies"){
+        if (!new_resume[key]){
+            new_resume[key]=[]
+        }
+        new_resume[key][index]=value; 
+    }
+    else if (key=='personal_details'){
+        if(!new_resume[key]){
+            new_resume[key]={};
+        }
+        
+
+        new_resume [key][indexkey]=value
+    }
+    
+    else if(key=='languages'){
+        if(!new_resume[key]){
+            new_resume[key]=[];
+        }
+        if(!new_resume[key][index]){
+            new_resume[key][index]={}
+        }
+        new_resume [key][index][indexkey]=value 
+        
+    }
+
+    else {
+        new_resume[key][index]=value;  
+    }
+    
+}
+
+
+
+
+        $(document).ready(function(){
+            $('#apinew').click(function(){
+                $.ajax({
+                    type:'post',
+                    url:'http://karka.academy/api/action.php',
+                    data:{
+                        request:'create_resume',
+                        user:'bibin',
+                        resume:{
+                             new_resume
+                        }
+                        
+                    },
+                    success:function(response){
+                        console.log(response)
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <style>
+        .color{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <h1 id="new">Welcome</h1>
+    <div id="wrap"><h2>Good Morning</h2></div>
+
+    <button>Change</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, provident.</p>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('#new').html('Changes Done')
+                $('#wrap h2').toggleClass('color')
+            })
+            // $('button').on('click',function(){
+            //     $('#new').html('Changes Done')
+            //     $('#wrap h2').toggleClass('color')
+            // })
+            $('p').on({
+                click:function(){
+                    $(this).css('background','green')
+                },
+                mouseenter:function(){
+                    $(this).css('background','blue')
+                },
+                mouseleave:function(){
+                    $(this).css('background','orange')
+                }
+                
+            })
+        })
+    </script>
+</body>
+</html>

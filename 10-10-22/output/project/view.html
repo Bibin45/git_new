@@ -102,7 +102,7 @@ login_user=JSON.parse(localStorage.getItem('users'))
    if(login_user==signup_user[i].email){
      console.log(login_user)
      
-   a=a+"<li><a class='nav-link' href='login.html'><button class='btn text-primary font-weight-bold p-0' onclick='delete_log("+i+")'>"+"Logout"+"</button></a></li>"
+   a=a+"<li><a class='nav-link' href='login.html'><button class='btn text-primary font-weight-bold p-0' onclick='delete_log("+i+")'>"+"Logout - "+signup_user[i].name+"</button></a></li>"
    document.getElementById('home').innerHTML=a
    
    
@@ -138,17 +138,7 @@ alert('You have Logged out now')
         login_user=JSON.parse(localStorage.getItem('users'))
         let signup_user=JSON.parse(localStorage.getItem('login'))
         console.log(signup_user)
-        // for(let i=0;i<signup_user.length;i++){
-            
-        //     if(login_user!=signup_user[i].email){
-                
-        //         // alert('Login First')
-        //         window.location.replace('login.html')
-
-                
-        //     }
-        //     break
-        // }
+        
         for(let i=0;i<signup_user.length;i++){
             if (login_user==signup_user[i].email){
                 alert("Are you Sure")

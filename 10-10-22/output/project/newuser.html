@@ -50,7 +50,7 @@
 
             <div class="mb-3">
               <label for="email">Phone Number </label>
-              <input type="number" class="form-control" onkeyup="data('number',this.value)" id="email" placeholder="90xxxxxx">
+              <input type="number" class="form-control" onkeyup="data('number',this.value)" id="email" placeholder="90xxxxxx" required>
               <div class="invalid-feedback">
                 Please enter a valid mobile number
               </div>
@@ -58,14 +58,14 @@
     
             <div class="mb-3">
               <label for="email">Email </label>
-              <input type="email" class="form-control" onkeyup="data('email',this.value)" id="atemail" placeholder="you@example.com">
+              <input type="email" class="form-control" onkeyup="data('email',this.value)" id="atemail" placeholder="you@example.com" required>
               <div class="invalid-feedback">
                 Please enter a valid email address
               </div>
             </div>
             <div class="mb-3">
                 <label for="password">Password </label>
-                <input type="password" class="form-control" onkeyup="data('pass',this.value)" id="pw" placeholder="password">
+                <input type="password" class="form-control" onkeyup="data('pass',this.value)" id="pw" placeholder="password" required>
                 <div class="invalid-feedback">
                   Please enter a valid password
                 </div>
@@ -112,26 +112,7 @@ function sub(){
 
 
 
-//   form validation  //    
-(function () {
-  'use strict'
 
-  window.addEventListener('load', function () {
-    
-    var forms = document.getElementsByClassName('needs-validation')
-
-    Array.prototype.filter.call(forms, function (form) {
-      form.addEventListener('submit', function (event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-  }, false)
-})()
 
 
     </script>

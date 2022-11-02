@@ -9,26 +9,26 @@
 
 </head>
 <body>
-    <body class="container ">
+    <body class="container font-weight-bold">
         <div class="card p-3 mar ">
           <label>Name : </label>
-          <input class="border-rounded" type="text" onkeyup="add_detail('name',this.value)" /></br></br>
+          <input class="border-rounded form-control " type="text" onkeyup="add_detail('name',this.value)" /></br></br>
           <label>Email : </label>
-          <input class=" border-rounded" type="email" onkeyup="add_detail('email',this.value)" /></br></br>
+          <input class=" border-rounded form-control" type="email" onkeyup="add_detail('email',this.value)" /></br></br>
           <label>Phone : </label>
-          <input class=" border-rounded"type="number" onkeyup="add_detail('phone',this.value)" /></br></br>
+          <input class=" border-rounded form-control"type="number" onkeyup="add_detail('phone',this.value)" /></br></br>
           <label>Role : </label>
-          <input class=" border-rounded"type="text" onkeyup="add_detail('role',this.value)" /></br></br>
+          <input class=" border-rounded form-control"type="text" onkeyup="add_detail('role',this.value)" /></br></br>
           <label>Objective : </label>
-          <input class=" border-rounded"type="text" onkeyup="add_detail('objective',this.value)" /></br></br>
+          <input class=" border-rounded form-control"type="text" onkeyup="add_detail('objective',this.value)" /></br></br>
         
       <!-- skills -->
       
           <label>Skills : </label>
-          <input class=" border-rounded"type="text" onkeyup="add_detail('skills',this.value, 0)" /><br>
-          <input class=" border-rounded"type="text" onkeyup="add_detail('skills',this.value, 1)" /><br>
-          <input class=" border-rounded"type="text" onkeyup="add_detail('skills',this.value, 2)" /><br>
-          <input class=" border-rounded"type="text" onkeyup="add_detail('skills',this.value, 3)" />
+          <input class=" border-rounded form-control"type="text" onkeyup="add_detail('skills',this.value, 0)" /><br>
+          <input class=" border-rounded form-control"type="text" onkeyup="add_detail('skills',this.value, 1)" /><br>
+          <input class=" border-rounded form-control"type="text" onkeyup="add_detail('skills',this.value, 2)" /><br>
+          <input class=" border-rounded form-control"type="text" onkeyup="add_detail('skills',this.value, 3)" />
         </div>
       
       <!-- education -->
@@ -48,24 +48,24 @@
               <tbody>
                 <tr>
                   <th >1</th>
-                  <td><input type="text" onkeyup="add_detail('education',this.value,0,'course')"/></td>
-                  <td><input type="number" onkeyup="add_detail('education',this.value,0,'year')"/></td>
-                  <td><input type="text" onkeyup="add_detail('education',this.value,0,'institute')"/></td>
-                  <td><input type="number" onkeyup="add_detail('education',this.value,0,'percentage')"/></td>
+                  <td><input type="text" class="form-control" onkeyup="add_detail('education',this.value,0,'course')"/></td>
+                  <td><input type="number"  class="form-control" onkeyup="add_detail('education',this.value,0,'year')"/></td>
+                  <td><input type="text" class="form-control"  onkeyup="add_detail('education',this.value,0,'institute')"/></td>
+                  <td><input type="number"  class="form-control" onkeyup="add_detail('education',this.value,0,'percentage')"/></td>
                 </tr>
                 <tr>
                   <th >2</th>
-                  <td><input type="text" onkeyup="add_detail('education',this.value,1,'course')"/></td>
-                  <td><input type="number" onkeyup="add_detail('education',this.value,1,'year')"/></td>
-                  <td><input type="text" onkeyup="add_detail('education',this.value,1,'institute')"/></td>
-                  <td><input type="number" onkeyup="add_detail('education',this.value,1,'percentage')"/></td>
+                  <td><input type="text" class="form-control"  onkeyup="add_detail('education',this.value,1,'course')"/></td>
+                  <td><input type="number"  class="form-control" onkeyup="add_detail('education',this.value,1,'year')"/></td>
+                  <td><input type="text"  class="form-control" onkeyup="add_detail('education',this.value,1,'institute')"/></td>
+                  <td><input type="number" class="form-control"  onkeyup="add_detail('education',this.value,1,'percentage')"/></td>
                 </tr>
                 <tr>
                   <th >3</th>
-                  <td><input type="text" onkeyup="add_detail('education',this.value,2,'course')"/></td>
-                  <td><input type="number" onkeyup="add_detail('education',this.value,2,'year')"/></td>
-                  <td><input type="text" onkeyup="add_detail('education',this.value,2,'institute')"/></td>
-                  <td><input type="number" onkeyup="add_detail('education',this.value,2,'percentage')"/></td>
+                  <td><input type="text"  class="form-control" onkeyup="add_detail('education',this.value,2,'course')"/></td>
+                  <td><input type="number"  class="form-control" onkeyup="add_detail('education',this.value,2,'year')"/></td>
+                  <td><input type="text"  class="form-control" onkeyup="add_detail('education',this.value,2,'institute')"/></td>
+                  <td><input type="number" class="form-control"  onkeyup="add_detail('education',this.value,2,'percentage')"/></td>
                 </tr>
                 
               </tbody>
@@ -86,15 +86,15 @@
               <tbody>
                 <tr>
                   <th scope="row">1</th>
-                  <td><input type="text" onkeyup="add_detail('certification',this.value,0,'course')"/></td>
-                  <td><input type="text" onkeyup="add_detail('certification',this.value,0,'institute')"/></td>
-                  <td><input type="text" onkeyup="add_detail('certification',this.value,0,'duration')"/></td>
+                  <td><input type="text"  class="form-control"  onkeyup="add_detail('certification',this.value,0,'course')"/></td>
+                  <td><input type="text"  class="form-control"  onkeyup="add_detail('certification',this.value,0,'institute')"/></td>
+                  <td><input type="text"  class="form-control" onkeyup="add_detail('certification',this.value,0,'duration')"/></td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
-                  <td><input type="text" onkeyup="add_detail('certification',this.value,1,'course')"/></td>
-                  <td><input type="text" onkeyup="add_detail('certification',this.value,1,'institute')"/></td>
-                  <td><input type="text" onkeyup="add_detail('certification',this.value,1,'duration')"/></td>
+                  <td><input type="text"  class="form-control" onkeyup="add_detail('certification',this.value,1,'course')"/></td>
+                  <td><input type="text"  class="form-control" onkeyup="add_detail('certification',this.value,1,'institute')"/></td>
+                  <td><input type="text" class="form-control"  onkeyup="add_detail('certification',this.value,1,'duration')"/></td>
                 </tr>
                 
               </tbody>
@@ -115,14 +115,14 @@
               <tbody>
                 <tr>
                   <th scope="row">1</th>
-                  <td><input type="text" onkeyup="add_detail('project',this.value,0,'title')"/></td>
-                  <td><input type="text" onkeyup="add_detail('project',this.value,0,'abstract')"/></td>
+                  <td><input type="text"  class="form-control"  onkeyup="add_detail('project',this.value,0,'title')"/></td>
+                  <td><input type="text" class="form-control"  onkeyup="add_detail('project',this.value,0,'abstract')"/></td>
                   
                 </tr>
                 <tr>
                   <th scope="row">2</th>
-                  <td><input type="text" onkeyup="add_detail('project',this.value,1,'title')"/></td>
-                  <td><input type="text" onkeyup="add_detail('project',this.value,1,'abstract')"/></td>
+                  <td><input type="text"  class="form-control" onkeyup="add_detail('project',this.value,1,'title')"/></td>
+                  <td><input type="text"  class="form-control" onkeyup="add_detail('project',this.value,1,'abstract')"/></td>
                   
                 </tr>
                 
@@ -145,159 +145,415 @@
               <tbody>
                 <tr>
                   <th scope="row">1</th>
-                  <td><input type="text" onkeyup="add_detail('experience',this.value,0,'company')"/></td>
-                  <td><input type="text" onkeyup="add_detail('experience',this.value,0,'duration')"/></td>
-                  <td><input type="text" onkeyup="add_detail('experience',this.value,0,'role')"/></td>
+                  <td><input type="text"   class="form-control" onkeyup="add_detail('experience',this.value,0,'company')"/></td>
+                  <td><input type="text"   class="form-control" onkeyup="add_detail('experience',this.value,0,'duration')"/></td>
+                  <td><input type="text"  class="form-control" onkeyup="add_detail('experience',this.value,0,'role')"/></td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
-                  <td><input type="text" onkeyup="add_detail('experience',this.value,1,'company')"/></td>
-                  <td><input type="text" onkeyup="add_detail('experience',this.value,1,'duration')"/></td>
-                  <td><input type="text" onkeyup="add_detail('experience',this.value,1,'role')"/></td>
+                  <td><input type="text"  class="form-control" onkeyup="add_detail('experience',this.value,1,'company')"/></td>
+                  <td><input type="text"  class="form-control" onkeyup="add_detail('experience',this.value,1,'duration')"/></td>
+                  <td><input type="text"  class="form-control" onkeyup="add_detail('experience',this.value,1,'role')"/></td>
                 </tr>
                 
               </tbody>
             </table>
             <div class="card p-3 mar">
               <h5 >Area of Interest : </h5>
-              <input class=" border-rounded"type="text" onkeyup="add_detail('area_of_interest',this.value,0)"/><br>
-              <input class=" border-rounded"type="text" onkeyup="add_detail('area_of_interest',this.value,1)"/>
+              <input class=" border-rounded form-control "type="text" onkeyup="add_detail('area_of_interest',this.value,0)"/><br>
+              <input class=" border-rounded form-control"type="text" onkeyup="add_detail('area_of_interest',this.value,1)"/>
             </div><br>
             <div class="card p-3 mar">
               <h5 >Hobbies : </h5>
-              <input class=" border-rounded"type="text" onkeyup="add_detail('hobbies',this.value,0)"/><br>
-              <input class=" border-rounded"type="text" onkeyup="add_detail('hobbies',this.value,1)"/>
+              <input class=" border-rounded form-control"type="text" onkeyup="add_detail('hobbies',this.value,0)"/><br>
+              <input class=" border-rounded form-control"type="text" onkeyup="add_detail('hobbies',this.value,1)"/>
             </div><br>
       
             <div class="card p-3 mar">
             <label>Personal Details : </label></br></br>
             <label>Father's Name : </label>
-            <input class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,0,'father_name')"/></br>
+            <input class=" border-rounded form-control"type="text" onkeyup="add_detail('personal_details',this.value,0,'father_name')"/></br>
             <label>Mother's Name : </label>
-            <input class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,1,'mother_name')"/></br>
+            <input class=" border-rounded form-control"type="text" onkeyup="add_detail('personal_details',this.value,1,'mother_name')"/></br>
             <label>Sibling's Name : </label>
-            <input class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,2,'sibling_name')"/></br>
+            <input class=" border-rounded form-control"type="text" onkeyup="add_detail('personal_details',this.value,2,'sibling_name')"/></br>
             <label>Age : </label>
-            <input class=" border-rounded"type="number" id="age" onkeyup="add_detail('personal_details',this.value,3,'age')"/></br>
+            <input class=" border-rounded form-control"type="number" id="age" onkeyup="add_detail('personal_details',this.value,3,'age')"/></br>
             <label>Blood Group : </label>
-            <input class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,4,'blood_group')"/></br>
+            <input class=" border-rounded form-control"type="text" onkeyup="add_detail('personal_details',this.value,4,'blood_group')"/></br>
             <label>Languages Known: </label>
-            <input class=" border-rounded"type="text" onkeyup="add_detail('languages',this.value,0,'language')"/><br>
-            <input class=" border-rounded"type="text" onkeyup="add_detail('languages',this.value,1,'language')"/><br>
-            <input class=" border-rounded"type="text" onkeyup="add_detail('languages',this.value,2,'language')"/></br>
+            <input class=" border-rounded form-control"type="text" onkeyup="add_detail('languages',this.value,0,'language')"/><br>
+            <input class=" border-rounded form-control"type="text" onkeyup="add_detail('languages',this.value,1,'language')"/><br>
+            <input class=" border-rounded form-control"type="text" onkeyup="add_detail('languages',this.value,2,'language')"/></br>
             <label>Gender : </label>
-            <input class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,8,'gender')"/></br>
+            <input class=" border-rounded form-control"type="text" onkeyup="add_detail('personal_details',this.value,8,'gender')"/></br>
             <label>Marital Status : </label>
-            <input class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,9,'marital_status')"/></br>
+            <input class=" border-rounded form-control"type="text" onkeyup="add_detail('personal_details',this.value,9,'marital_status')"/></br>
             <label>Address : </label>
-            <textarea class=" border-rounded"type="text" onkeyup="add_detail('personal_details',this.value,10,'address')"></textarea></br></br>
+            <textarea class=" border-rounded form-control"type="text" onkeyup="add_detail('personal_details',this.value,10,'address')"></textarea></br></br>
       
           </div>
+          <table id="disp" class="table table-stripped table-bordered text-center">
+            <thead>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th colspan="2">Action</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
       
           <div class="text-center">
         
-            <button type="button" class="btn btn-primary" id='apinew'>API Call</button>
+            <button type="button" class="btn btn-primary mr-3 mb-5 mt-5" id='apisave'>Save Resume</button>
+            <button type="button" class="btn btn-success mr-3" id='apiget'>Get Resume</button>
+            <button type="button" class="btn btn-danger mr-3" id='apidelete'>Delete Resume</button>
+            
+            <button type="button" class="btn btn-primary mr-3 disabled" id='apigetname'>Get Resume By Name</button>
           </div>
       
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 
     <script>
-        let new_resume={}
+        
+        let resume={}
 
 function add_detail(key,value,index=null,indexkey=null){
     if(index==null){ 
-    new_resume[key]=value;}
+    resume[key]=value;}
     else if (key=='education'){
-        if(!new_resume[key]){
-            new_resume[key]=[];
+        if(!resume[key]){
+            resume[key]=[];
         }
-        if(!new_resume[key][index]){
-            new_resume[key][index]={}
+        if(!resume[key][index]){
+            resume[key][index]={}
         }
-        new_resume [key][index][indexkey]=value
+        resume [key][index][indexkey]=value
     }
     else if (key=='certification'){
-        if(!new_resume[key]){
-            new_resume[key]=[];
+        if(!resume[key]){
+            resume[key]=[];
         }
-        if(!new_resume[key][index]){
-            new_resume[key][index]={}
+        if(!resume[key][index]){
+            resume[key][index]={}
         }
-        new_resume [key][index][indexkey]=value
+        resume [key][index][indexkey]=value
     }
     else if (key=='project'){
-        if(!new_resume[key]){
-            new_resume[key]=[];
+        if(!resume[key]){
+            resume[key]=[];
         }
-        if(!new_resume[key][index]){
-            new_resume[key][index]={}
+        if(!resume[key][index]){
+            resume[key][index]={}
         }
-        new_resume [key][index][indexkey]=value
+        resume [key][index][indexkey]=value
     }
     else if (key=='experience'){
-        if(!new_resume[key]){
-            new_resume[key]=[];
+        if(!resume[key]){
+            resume[key]=[];
         }
-        if(!new_resume[key][index]){
-            new_resume[key][index]={}
+        if(!resume[key][index]){
+            resume[key][index]={}
         }
-        new_resume [key][index][indexkey]=value
+        resume [key][index][indexkey]=value
     }
     else if (key=="skills"||key=="area_of_interest"||key=="hobbies"){
-        if (!new_resume[key]){
-            new_resume[key]=[]
+        if (!resume[key]){
+            resume[key]=[]
         }
-        new_resume[key][index]=value; 
+        resume[key][index]=value; 
     }
     else if (key=='personal_details'){
-        if(!new_resume[key]){
-            new_resume[key]={};
+        if(!resume[key]){
+            resume[key]={};
         }
         
 
-        new_resume [key][indexkey]=value
+        resume [key][indexkey]=value
     }
     
     else if(key=='languages'){
-        if(!new_resume[key]){
-            new_resume[key]=[];
+        if(!resume[key]){
+            resume[key]=[];
         }
-        if(!new_resume[key][index]){
-            new_resume[key][index]={}
+        if(!resume[key][index]){
+            resume[key][index]={}
         }
-        new_resume [key][index][indexkey]=value 
+        resume [key][index][indexkey]=value 
         
     }
 
     else {
-        new_resume[key][index]=value;  
+        resume[key][index]=value;  
     }
     
 }
 
 
 
-
         $(document).ready(function(){
-            $('#apinew').click(function(){
+          $.ajax({
+            type:'get',
+            url:'http://karka.academy/api/action.php',
+            data:{
+              request:'get_user_resume',
+              user:'bibin',
+            },
+            success:function(data){
+              let a=JSON.parse(data)
+              console.log(a)
+
+              
+              
+              let j=''
+              
+              
+              for(let i=0;i<a.data.length;i++){
+              
+                let b=JSON.parse(a.data[i].data)
+                
+
+                console.log(b)
+                j=j+'<tr>'+'<td>'+parseInt(i+1)+'</td>'+'<td>'+b.name+'</td>'+'<td>'+b.email+'</td>'+'<td>'+b.phone+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="remove" class="btn btn-primary font-weight-bold">'+'Delete'+'</button>'+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="apigetid" class="btn btn-warning text-white font-weight-bold">'+'Get Resume By Id'+'</button>'+'</td>'+'</tr>'
+                
+                
+                
+              }
+              $('#disp tbody').append(j)
+            }
+          })
+
+// delete the displaying
+
+          $(document).on('click','#remove', function(){
+            let rem=this.value
                 $.ajax({
+                    type:'get',
+                    url:'http://karka.academy/api/action.php',
+                    data:{
+                        request:'delete_user_resume',
+                        user:'bibin',
+                        id:rem,
+
+                        
+                    },
+                    success:function(response){
+                      console.log(response)
+
+                    },
+                    error:function(){
+                      console.log(Failed)
+                    }
+                })
+                $.ajax({
+            type:'get',
+            url:'http://karka.academy/api/action.php',
+            data:{
+              request:'get_user_resume',
+              user:'bibin',
+            },
+            success:function(data){
+              let a=JSON.parse(data)
+              console.log(a)
+
+              
+              
+              let j=''
+              
+              
+              for(let i=0;i<a.data.length;i++){
+              
+                let b=JSON.parse(a.data[i].data)
+                
+
+                console.log(b)
+                j=j+'<tr>'+'<td>'+parseInt(i+1)+'</td>'+'<td>'+b.name+'</td>'+'<td>'+b.email+'</td>'+'<td>'+b.phone+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="remove" class="btn btn-primary font-weight-bold">'+'Delete'+'</button>'+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="apigetid" class="btn btn-warning text-white font-weight-bold">'+'Get Resume By Id'+'</button>'+'</td>'+'</tr>'
+                
+                
+                
+              }
+              $('#disp tbody').html(j)
+            }
+          })
+              })
+            
+          // save resume
+
+
+          $('#apisave').click(function(){
+            $.ajax({
                     type:'post',
                     url:'http://karka.academy/api/action.php',
                     data:{
                         request:'create_resume',
                         user:'bibin',
-                        resume:{
-                             new_resume
-                        }
+                        resume
+                        
                         
                     },
                     success:function(response){
                         console.log(response)
+                        
+                    },
+                    error:function(){
+                      console.log(Failed)
+                    }
+                    
+                    
+            })
+
+            $.ajax({
+            type:'get',
+            url:'http://karka.academy/api/action.php',
+            data:{
+              request:'get_user_resume',
+              user:'bibin',
+            },
+            success:function(data){
+              let a=JSON.parse(data)
+              console.log(a)
+
+              
+              
+              let j=''
+              
+              
+              for(let i=0;i<a.data.length;i++){
+              
+                let b=JSON.parse(a.data[i].data)
+                
+
+                console.log(b)
+                j=j+'<tr>'+'<td>'+parseInt(i+1)+'</td>'+'<td>'+b.name+'</td>'+'<td>'+b.email+'</td>'+'<td>'+b.phone+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="remove" class="btn btn-primary font-weight-bold">'+'Delete'+'</button>'+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="apigetid" class="btn btn-warning text-white font-weight-bold">'+'Get Resume By Id'+'</button>'+'</td>'+'</tr>'
+                
+                
+                
+              }
+              $('#disp tbody').html(j)
+            }
+            })
+          })
+
+
+// get resume
+
+
+              $('#apiget').click(function(){
+                $.ajax({
+                    type:'get',
+                    url:'http://karka.academy/api/action.php',
+                    data:{
+                        request:'get_user_resume',
+                        user:'bibin',
+                        
+                        
+                    },
+                    success:function(response){
+                        console.log(response)
+                    },
+                    error:function(){
+                      console.log(Failed)
                     }
                 })
-            })
+              })
+
+// delete resume
+
+
+              $('#apidelete').click(function(){
+                $.ajax({
+                    type:'get',
+                    url:'http://karka.academy/api/action.php',
+                    data:{
+                        request:'delete_user_resume',
+                        user:'bibin',
+                        id:830,
+                        
+                        
+                    },
+                    success:function(response){
+                        console.log(response)
+                    },
+                    error:function(){
+                      console.log(Failed)
+                    }
+                })
+              })
+
+
+// get resume by id
+
+
+              $(document).on('click','#apigetid', function(){
+                let sum=this.value
+                $.ajax({
+                    type:'get',
+                    url:'http://karka.academy/api/action.php',
+                    data:{
+                        request:'get_resume_by_id',
+                        user:'bibin',
+                        id:sum,   
+                    },
+                    success:function(response){
+                        console.log(response)
+                    },
+                    error:function(){
+                      console.log(Failed)
+                    },
+                })
+              })
+
+
+
+              // get resume  with name
+
+              $('#apigetname').click(function(){
+                $.ajax({
+                    type:'get',
+                    url:'http://karka.academy/api/action.php',
+                    data:{
+                        request:'get_user_resume',
+                        user:'bibin',
+                        
+                        
+                        
+                        
+                    },
+                    
+                    success:function(data){
+                        console.log(JSON.parse(data))
+                        let a=JSON.parse(data)
+                        
+                        console.log(a)
+                        let b=a.data
+                        console.log(b)
+                        let j=[]
+                        for(let i=0;i<b.length;i++){
+                          c=b[i].data
+                          j=c[i].email
+                          
+                          console.log(j)
+                          console.log(c)
+                          
+
+                        }
+                        
+                        
+                        
+                        
+                    },
+                    error:function(){
+                      console.log(Failed)
+                    }
+                })
+              })
+
         })
+      
     </script>
 </body>
 </html>

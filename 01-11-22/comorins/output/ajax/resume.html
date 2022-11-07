@@ -193,8 +193,15 @@
             <textarea class=" border-rounded form-control"type="text" onkeyup="add_detail('personal_details',this.value,10,'address')"></textarea></br></br>
       
           </div>
+
+          <div class="text-center">
+        
+            <button type="button" class="btn btn-primary mb-5 mt-5" id='apisave'>Save Resume</button>
+
+          </div>
+
           <table id="disp" class="table table-stripped table-bordered text-center">
-            <thead>
+            <thead class="text-success">
               <th>Id</th>
               <th>Name</th>
               <th>Email</th>
@@ -206,17 +213,11 @@
             </tbody>
           </table>
       
-          <div class="text-center">
-        
-            <button type="button" class="btn btn-primary mr-3 mb-5 mt-5" id='apisave'>Save Resume</button>
-            <button type="button" class="btn btn-success mr-3" id='apiget'>Get Resume</button>
-            <button type="button" class="btn btn-danger mr-3" id='apidelete'>Delete Resume</button>
-            
-            <button type="button" class="btn btn-primary mr-3 disabled" id='apigetname'>Get Resume By Name</button>
-          </div>
+          
       
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    
 
     <script>
         
@@ -225,34 +226,7 @@
 function add_detail(key,value,index=null,indexkey=null){
     if(index==null){ 
     resume[key]=value;}
-    else if (key=='education'){
-        if(!resume[key]){
-            resume[key]=[];
-        }
-        if(!resume[key][index]){
-            resume[key][index]={}
-        }
-        resume [key][index][indexkey]=value
-    }
-    else if (key=='certification'){
-        if(!resume[key]){
-            resume[key]=[];
-        }
-        if(!resume[key][index]){
-            resume[key][index]={}
-        }
-        resume [key][index][indexkey]=value
-    }
-    else if (key=='project'){
-        if(!resume[key]){
-            resume[key]=[];
-        }
-        if(!resume[key][index]){
-            resume[key][index]={}
-        }
-        resume [key][index][indexkey]=value
-    }
-    else if (key=='experience'){
+    else if (key=='education'||key=='certification'||key=='project'||key=='experience'||key=='languages'){
         if(!resume[key]){
             resume[key]=[];
         }
@@ -271,22 +245,8 @@ function add_detail(key,value,index=null,indexkey=null){
         if(!resume[key]){
             resume[key]={};
         }
-        
-
         resume [key][indexkey]=value
     }
-    
-    else if(key=='languages'){
-        if(!resume[key]){
-            resume[key]=[];
-        }
-        if(!resume[key][index]){
-            resume[key][index]={}
-        }
-        resume [key][index][indexkey]=value 
-        
-    }
-
     else {
         resume[key][index]=value;  
     }
@@ -296,6 +256,9 @@ function add_detail(key,value,index=null,indexkey=null){
 
 
         $(document).ready(function(){
+
+
+          function repeat(){
           $.ajax({
             type:'get',
             url:'http://karka.academy/api/action.php',
@@ -318,14 +281,19 @@ function add_detail(key,value,index=null,indexkey=null){
                 
 
                 console.log(b)
-                j=j+'<tr>'+'<td>'+parseInt(i+1)+'</td>'+'<td>'+b.name+'</td>'+'<td>'+b.email+'</td>'+'<td>'+b.phone+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="remove" class="btn btn-primary font-weight-bold">'+'Delete'+'</button>'+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="apigetid" class="btn btn-warning text-white font-weight-bold">'+'Get Resume By Id'+'</button>'+'</td>'+'</tr>'
+                j=j+'<tr>'+'<td>'+parseInt(i+1)+'</td>'+'<td>'+b.name+'</td>'+'<td>'+b.email+'</td>'+'<td>'+b.phone+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="remove" class="btn btn-primary font-weight-bold">'+'Delete'+'</button>'+'</td>'+'<td>'+'<a href="view.html?id='+a.data[i].id+' " target="_blank" >'+'<button value='+a.data[i].id+' id="apigetid" class="btn btn-warning text-white font-weight-bold">'+'View Resume'+'</button>'+'<a/>'+'</td>'+'</tr>'
                 
                 
                 
               }
-              $('#disp tbody').append(j)
-            }
+              $('#disp tbody').html(j)
+            },
+
+            
           })
+
+          }
+          repeat()
 
 // delete the displaying
 
@@ -343,123 +311,47 @@ function add_detail(key,value,index=null,indexkey=null){
                     },
                     success:function(response){
                       console.log(response)
-
-                    },
-                    error:function(){
-                      console.log(Failed)
+                      repeat()
                     }
-                })
-                $.ajax({
-            type:'get',
-            url:'http://karka.academy/api/action.php',
-            data:{
-              request:'get_user_resume',
-              user:'bibin',
-            },
-            success:function(data){
-              let a=JSON.parse(data)
-              console.log(a)
-
-              
-              
-              let j=''
-              
-              
-              for(let i=0;i<a.data.length;i++){
-              
-                let b=JSON.parse(a.data[i].data)
+               
                 
-
-                console.log(b)
-                j=j+'<tr>'+'<td>'+parseInt(i+1)+'</td>'+'<td>'+b.name+'</td>'+'<td>'+b.email+'</td>'+'<td>'+b.phone+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="remove" class="btn btn-primary font-weight-bold">'+'Delete'+'</button>'+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="apigetid" class="btn btn-warning text-white font-weight-bold">'+'Get Resume By Id'+'</button>'+'</td>'+'</tr>'
-                
-                
-                
-              }
-              $('#disp tbody').html(j)
-            }
-          })
-              })
-            
-          // save resume
-
-
-          $('#apisave').click(function(){
-            $.ajax({
-                    type:'post',
-                    url:'http://karka.academy/api/action.php',
-                    data:{
-                        request:'create_resume',
-                        user:'bibin',
-                        resume
-                        
-                        
-                    },
-                    success:function(response){
-                        console.log(response)
-                        
-                    },
-                    error:function(){
-                      console.log(Failed)
-                    }
                     
-                    
-            })
-
-            $.ajax({
-            type:'get',
-            url:'http://karka.academy/api/action.php',
-            data:{
-              request:'get_user_resume',
-              user:'bibin',
-            },
-            success:function(data){
-              let a=JSON.parse(data)
-              console.log(a)
-
-              
-              
-              let j=''
-              
-              
-              for(let i=0;i<a.data.length;i++){
-              
-                let b=JSON.parse(a.data[i].data)
-                
-
-                console.log(b)
-                j=j+'<tr>'+'<td>'+parseInt(i+1)+'</td>'+'<td>'+b.name+'</td>'+'<td>'+b.email+'</td>'+'<td>'+b.phone+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="remove" class="btn btn-primary font-weight-bold">'+'Delete'+'</button>'+'</td>'+'<td>'+'<button value='+a.data[i].id+' id="apigetid" class="btn btn-warning text-white font-weight-bold">'+'Get Resume By Id'+'</button>'+'</td>'+'</tr>'
-                
-                
-                
-              }
-              $('#disp tbody').html(j)
-            }
-            })
-          })
-
-
-// get resume
-
-
-              $('#apiget').click(function(){
-                $.ajax({
-                    type:'get',
-                    url:'http://karka.academy/api/action.php',
-                    data:{
-                        request:'get_user_resume',
-                        user:'bibin',
-                        
-                        
-                    },
-                    success:function(response){
-                        console.log(response)
-                    },
-                    error:function(){
-                      console.log(Failed)
-                    }
+                  })
                 })
+                
+              // save resume
+
+
+              $('#apisave').click(function(){
+                $.ajax({
+                        type:'post',
+                        url:'http://karka.academy/api/action.php',
+                        data:{
+                            request:'create_resume',
+                            user:'bibin',
+                            resume
+                            
+                            
+                        },
+                        success:function(response){
+                            console.log(response)
+                            repeat()
+
+                       
+                
+                        },
+                        error:function(){
+                          console.log(Failed)
+                        }
+                        
+                        
+                })
+
+                
               })
+
+
+    
 
 // delete resume
 
@@ -500,6 +392,7 @@ function add_detail(key,value,index=null,indexkey=null){
                     },
                     success:function(response){
                         console.log(response)
+                        
                     },
                     error:function(){
                       console.log(Failed)
@@ -509,48 +402,7 @@ function add_detail(key,value,index=null,indexkey=null){
 
 
 
-              // get resume  with name
-
-              $('#apigetname').click(function(){
-                $.ajax({
-                    type:'get',
-                    url:'http://karka.academy/api/action.php',
-                    data:{
-                        request:'get_user_resume',
-                        user:'bibin',
-                        
-                        
-                        
-                        
-                    },
-                    
-                    success:function(data){
-                        console.log(JSON.parse(data))
-                        let a=JSON.parse(data)
-                        
-                        console.log(a)
-                        let b=a.data
-                        console.log(b)
-                        let j=[]
-                        for(let i=0;i<b.length;i++){
-                          c=b[i].data
-                          j=c[i].email
-                          
-                          console.log(j)
-                          console.log(c)
-                          
-
-                        }
-                        
-                        
-                        
-                        
-                    },
-                    error:function(){
-                      console.log(Failed)
-                    }
-                })
-              })
+             
 
         })
       

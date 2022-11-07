@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body class="container">
+
+    <div id="total">
+
+    <h1 class="text-center text-primary">Welcome</h1>
+    <h1 id ="myname"></h1>
+<div class="mail">
+
+<label class="font-weight-bold font">E-mail :</label>
+<span class="font" id="email"></span><br>
+<label class="font-weight-bold font">Phone :</label>
+<span class="font" id="phone"></span><br>
+</div>
+<label class="font-weight-bold font">Role :</label>
+<span class="font" id="role"></span><br>
+<h5 class="font-weight-bold font">Objective : </h5>
+<span class="font ml-5" id="objective"></span>
+<br>
+<label class="font-weight-bold font">Skills :</label>
+<h6 class="font ml-5" id="skill"></h6><br><br>
+<h3 class="text-center und">Education</h3>
+    <table class="table text-center border p-3 table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th >#</th>
+            <th >Courses</th>
+            <th >Year</th>
+            <th >Institute</th>
+            <th >Percentage</th>
+          </tr>
+          </tr>
+        </thead>
+        <tbody id="edutable">
+          
+          
+        </tbody>
+      </table>
+      <!-- certification -->
+    <div class="row mt-5">
+      <div class="col-6 font-weight-bold card  ">
+        
+          <h3 class="text-center mt-3 mb-3 ">Certification</h3>
+          <div id="certify">
+        
+          </div>
+
+      </div>
+      <!-- project -->
+      <div class='col-6 font-weight-bold  card nopad'>
+        <h3 class="text-center mt-3 mb-3 und">Project</h3>
+        <p>Title : 
+        <span id="title1"></span></p>
+        <p>Abstract : 
+        <span id="abstract1"></span></p><br><br>
+        <p>Title : 
+          <span id="title2"></span></p>
+        <p>Abstract : 
+          <span id="abstract2"></span></p>
+      </div>
+    </div>
+
+      <!-- experience -->
+      <h3 class="text-center mt-5 und">Experience</h3>
+      <table class="table text-center border p-3 mt-3 mb-5 table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Company</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Role</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td id="company1"></td>
+            <td id="dur1"></td>
+            <td id="role1"></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td id="company2"></td>
+            <td id="dur2"></td>
+            <td id="role2"></td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <div class="card font-weight-bold p-3 mt-3 mb-5 area">
+        <p ><span class="und font">Area of Interest :</span>
+        <span  id="interest1"></span> ,
+        <span id="interest2"></span></p>
+        
+      </div>
+      <div class="card font-weight-bold p-3 area">
+        <p > <span class="und font">Hobbies :</span>
+          <span id="hobbies1"></span> ,
+          <span id="hobbies2"></span></p>
+      </div>
+      <br><br>
+      <div class="card p-3 area">
+        <h3> <span class="und">Personal Details :</span></h3></br></br>
+        <p class="font-weight-bold"> Father's Name : 
+        <span id="father"></span></p>
+        <p class="font-weight-bold"> Mother's Name : 
+        <span id="mother"></span></p>
+        <p class="font-weight-bold"> Sibling's Name : 
+        <span id="sibling"></span></p>
+        <p class="font-weight-bold"> Age : 
+        <span id="age"></span></p>
+        <p class="font-weight-bold"> Blood Group : 
+        <span id="blood"></span></p>
+        <p class="font-weight-bold"> Languages Known : 
+        <span id="lang0"></span>, 
+        <span id="lang1"></span>, 
+        <span id="lang2"></span></p>
+        <p class="font-weight-bold"> Gender : 
+        <span id="gen"></span></p>
+        <p class="font-weight-bold"> Marital Status : 
+        <span id="marital"></span></p>
+        <p class="font-weight-bold"> Address : </label>
+        <span id="address"></span></p>
+      </div>
+
+
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+     <script>
+        let a=window.location.search
+        let b=new URLSearchParams(a)
+        let url=b.get('id')
+
+
+        $(document).ready(function(){
+                let sum=url
+                $.ajax({
+                    type:'get',
+                    url:'http://karka.academy/api/action.php',
+                    data:{
+                        request:'get_resume_by_id',
+                        user:'bibin',
+                        id:sum,   
+                    },
+                    success:function(response){
+                        // console.log(response)
+                        l=JSON.parse(response)
+                        k=l.data
+                        e=k.data
+                        form=JSON.parse(e)
+                        console.log(form)
+                        
+// details                        
+
+                        $('#total #myname').html(form.name)
+                        $('#total #email').html(form.email)
+                        $('#total #phone').html(form.phone)
+                        $('#total #role').html(form.role)
+                        $('#total #objective').html(form.objective)
+
+
+// education
+                       
+                          
+                        for(let i=0;i<form.education.length;i++){
+                         var edu=edu+'<tr>'+'<td>'+parseInt(i+1)+'</td>'+'<td>'+form.education[i].course+'</td>'+'<td>'+form.education[i].year+'</td>'+'<td>'+form.education[i].institute+'</td>'+'<td>'+form.education[i].percentage+'</td>'+'</tr>'
+                        }
+                        $('#edutable').html(edu)
+
+
+// skills
+
+                        for(let i=0;i<form.skills.length;i++){
+                          var skill='<span>'+form.skills[i]+'</span>'
+                            $('#skill').append(skill+'  / ')
+                        }
+                        
+// certification
+                        let certificate;
+                        certificate=form.certification
+                        for(let i=0;i<certificate.length;i++){
+                          certi='<div>'+'<p>'+'Course : '+'<span>'+certificate[i].course+'</span>'+'</p>'+'<p>'+'Institute : '+'<span>'+certificate[i].institute+'</span>'+'</p>'+'<p>'+'Duration : '+'<span>'+certificate[i].duration+'</span>'+'</p>'+'</div>'
+                            $('#certify').append(certi)
+                        }
+
+
+                       
+
+                    },
+                    error:function(){
+                      console.log(Failed)
+                    },
+                })
+              })
+              
+     </script> 
+</body>
+</html>

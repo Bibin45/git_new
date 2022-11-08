@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q13</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+    <h3>Open The Console</h3>
+ 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+
+// question 1
+
+        let add=(a,b=1)=>a+b
+        console.log(add(2,3))
+        console.log(add(2))
+
+
+
+// question 2
+
+        class Places{
+            constructor(hill,desert,forest)
+            {
+                this.hill=hill;
+                this.desert=desert;
+                this.forest=forest;
+            }
+            static call(){
+                return new Places('himalayas','sahara','amazon')
+            }  
+            
+            
+    } 
+        
+        console.log(Places.call())
+
+
+// question 3
+    let ob1={
+    name:'bibin',
+    place:'mtm'
+    }
+    let ob2={
+        name:'bibin',
+        place:'mtm'
+    }
+
+    let check=(a,b)=>{
+        for(let i in b){
+            if (a[i]==b[i]){
+                console.log("same value")
+            }
+        else{
+            console.log("different")}
+        }
+    }
+    check(ob1,ob2)
+
+
+    </script>
+</body>
+</html>

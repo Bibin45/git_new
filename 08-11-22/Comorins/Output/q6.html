@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+    <h2>Person's List Based on Seniority , </h2>
+    <div id="per"></div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+        let persons=[
+            {
+                name:"Bibin",
+                age:22
+            },
+            {
+                name:"Arun",
+                age:20
+            },
+            {
+                name:"Abin",
+                age:30
+            },
+            {
+                name:"Arlin",
+                age:25
+            },
+        ]
+
+// sorting ages in descending order 
+
+        
+        
+        let arr=persons.map((data)=>{
+               return  data.age
+            })
+        
+        let newarr=arr.reduce((item,total)=>item+total)
+        console.log(newarr)
+        
+
+// foreach() to display
+
+        persons.forEach(mycom)
+        function mycom(item){
+            sum="<h4 class='text-primary'>"+'Name : '+item.name+"</h4>"+"<h4>"+'Age : '+item.age+"</h4>"
+            $('#per').append(sum)
+            
+        }
+
+// display total age
+
+        tot="<h4 class='text-danger'>" +'Total Age : '+newarr+"</h4>"
+        $('#per').append(tot)
+    </script>
+</body>
+</html>

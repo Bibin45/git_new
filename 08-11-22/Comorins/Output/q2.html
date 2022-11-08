@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    <h1>The Company Names That Started After 1987 Are,</h1>
+    <ol id="com"></ol>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        let company=[
+            {name:"Zoho",
+             estd:1947
+            },
+            {name:"TCS",
+             estd:2000
+            },
+            {name:"Wipro",
+             estd:1999
+            },
+            {name:"Cognizent",
+             estd:1986
+            }
+        ]
+
+// fiter for year
+
+        
+        
+        let year = company.filter(myfilt=(item)=>item.estd>1987)
+        console.log(year)
+
+// foreach() to display
+
+        
+
+        
+        year.forEach(mycom=(item)=>{
+            let sum=''
+            sum="<li>"+"<h3>"+'Company Name : '+item.name+"</h3>"+"<h3>"+'Started Year : '+item.estd+"</h3>"+"</li>"
+            $('#com').append(sum)
+        })
+    </script>
+</body>
+</html>

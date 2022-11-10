@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q13</title>
+    <title>Part 2</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 </head>
@@ -16,6 +16,7 @@
     <script>
 
 // question 1
+console.warn('question1')
 
         let add=(a,b=1)=>a+b
         console.log(add(2,3))
@@ -24,6 +25,7 @@
 
 
 // question 2
+console.warn('question2')
 
         class Places{
             constructor(hill,desert,forest)
@@ -43,6 +45,8 @@
 
 
 // question 3
+console.warn('question3')
+
     let ob1={
     name:'bibin',
     place:'mtm'
@@ -62,6 +66,67 @@
         }
     }
     check(ob1,ob2)
+
+
+// question 4
+console.warn('question4')
+
+var arr=[1,2,3,4,5,6,7,8,9,10]
+let myfil=(item)=> {return item%2==0}
+let newarr=arr.filter(myfil)
+console.log(newarr)  // filtered value
+
+for(let i=0; i<arr.length;i++){
+    for(let j=0;j<newarr.length;j++){
+        if(arr[i]==newarr[j]){
+            arr.splice(i,1)
+            
+        }
+        
+    }
+    
+   
+}
+console.log(arr) //original array without filter value
+
+
+// question 5
+console.warn('question5')
+
+let find_type=(a)=>{
+    if (typeof(a)=='string'){
+        console.log("The Value is String")
+    }
+    else if (typeof(a)=='number'){
+        console.log("The Value is Number")
+    }
+    else if (typeof(a)=='null'){
+        console.log("The Value is Null")
+    }
+    else {
+        console.log("The Value is Undefined")
+    }
+}
+find_type(2)
+find_type("Bibin")
+find_type()
+
+
+//question6
+console.warn('question6')
+
+let person={
+    name:'Bibin',
+    age:22,
+    personal_details:{
+        blood:'O+',
+        mobile:'ngl',
+        district:'kanyakumari'
+    }
+}
+
+let {personal_details:{district:place}}=person
+console.log(place)
 
 
     </script>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+    <h3>Open The Console</h3>
+
+    <h1>The Company Names Are,</h1>
+    <ol id="com"></ol>
+
+    <h1>The Company Names That Started After 1987 Are,</h1>
+    <ol id="com1"></ol>
+
+    <h1>The Retail Companies Are,</h1>
+    <div id="com2"></div>
+
+    <h1>The Closed Companies List Based On The Year Are,</h1>
+    <div id="com3"></div>
+
+    <h2>Person's List Based on Seniority , </h2>
+    <div id="per"></div>
+ 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+
+    // question 1
+    console.warn('question1')
+
+let company=[
+            {name:"Zoho",
+             estd:1947
+            },
+            {name:"TCS",
+             estd:2000
+            },
+            {name:"Wipro",
+             estd:1999
+            },
+            {name:"Cognizent",
+             estd:1986
+            }
+        ]
+        
+// foreach() to display
+
+        
+        
+        
+        company.forEach(myfun=(item)=>{
+            let sum=''
+            sum="<li>"+"<h3>"+item.name+"</h3>"+"</li>"
+            $('#com').append(sum)
+        })
+
+    // question 2
+    console.warn('question2')  
+
+// fiter for year
+
+        
+        
+        let year = company.filter(myfilt=(item)=>item.estd>1987)
+        console.log(year)
+
+// foreach() to display
+
+        
+
+        
+        year.forEach(mycom=(item)=>{
+            let sum=''
+            sum="<li>"+"<h3>"+'Company Name : '+item.name+"</h3>"+"<h3>"+'Started Year : '+item.estd+"</h3>"+"</li>"
+            $('#com1').append(sum)
+        })
+
+
+    // question 3
+    console.warn('question3')
+
+    let company1=[
+            {name:"Zoho",
+             estd:1947,
+             category:"Retail",
+             end:2010
+            },
+            {name:"TCS",
+             estd:2000,
+             category:"Service",
+             end:2018
+            },
+            {name:"Wipro",
+             estd:1999,
+             category:"Retail",
+             end:2020
+            },
+            {name:"Cognizent",
+             estd:1986,
+             category:"Product",
+             end:2012
+            }
+        ]
+
+// fiter for year
+
+        
+        let retail = company1.filter(myfilt=(item)=>{
+            return item.category=="Retail"
+        })
+        console.log(retail)
+        
+        
+// foreach() to display
+
+        
+
+        
+        retail.forEach(mycom=(item)=>{let sum=''
+            sum="<div>"+"<h4>"+'Company Name : '+item.name+"</h4>"+"<p>"+'Company Category : '+item.category+"</p>"+"<p>"+'Company Started : '+item.estd+"</p>"+"<p>"+'Company Closed : '+item.end+"</p>"+"</div>"
+            $('#com2').append(sum)
+            
+        })
+        var inc=retail.map((a)=>{return  a.estd+1+" : Started Year After Increment "})
+            console.log(inc)
+            $('#com2').append(inc)
+
+
+    // question 4
+    console.warn('question4')
+
+    // sorting companies in ascending order based on closed year
+    
+    let newarr=company1.sort((a,b)=>(a.end>b.end) ? 1 : (a.end < b.end) ? -1 : 0)
+        console.log(newarr)
+    
+// foreach() to display
+
+        newarr.forEach(mycom=(newarr)=>{
+            let sum=''
+            sum="<div>"+"<h4>"+'Company Name : '+newarr.name+"</h4>"+"<p>"+'Company Category : '+newarr.category+"</p>"+"<p>"+'Company Started : '+newarr.estd+"</p>"+"<p class='text-warning'>"+'Company Closed : '+newarr.end+"</p>"+"</div>"
+            $('#com3').append(sum)
+        })
+
+// question 5
+console.warn('question5')
+
+        let persons=[
+            {
+                name:"Bibin",
+                age:22
+            },
+            {
+                name:"Arun",
+                age:20
+            },
+            {
+                name:"Abin",
+                age:30
+            },
+            {
+                name:"Arlin",
+                age:25
+            },
+        ]
+
+// sorting ages in descending order 
+
+        let newarr1=persons.sort((a,b)=>(a.age<b.age)?1 :(a.age>b.age)?-1:0)
+        console.log(newarr1)
+
+// foreach() to display
+
+        
+        
+        newarr1.forEach(mycom=((newarr)=>{
+            let sum=''
+            sum="<h4 class='text-primary'>"+'Name : '+newarr.name+"</h4>"+"<h4>"+'Age : '+newarr.age+"</h4>"
+            $('#per').append(sum)
+        }))
+
+
+        // question 6
+    console.warn('question6')
+
+
+    //adding ages
+
+        
+        
+    let arr=persons.map((data)=>{
+               return  data.age
+            })
+        
+        let newarr2=arr.reduce((item,total)=>item+total)
+        console.log(newarr2)
+        
+
+
+
+// display total age
+
+        tot="<h4 class='text-danger'>" +'Total Age : '+newarr2+"</h4>"
+        $('#per').append(tot)
+
+// question 7
+console.warn('question7')
+
+
+        const company2=
+            {name:"Zoho",
+             estd:1947,
+             category:"Retail",
+             end:2010,
+             print:()=>(company2.name)
+            }
+        
+//destructuring object
+
+        const{name,estd,category,end,print}=company2
+        console.log(company2.print())
+
+// question 8
+console.warn('question8')
+
+        let add=(...args)=>{
+            let sum=0
+            for(let i of args){ sum+=i }
+            console.log(sum)
+        }
+        add(2,3,4,5)                        //adding using rest operator
+
+ // question 9
+console.warn('question9')  
+
+let add1=(...args)=>{
+            console.log(...args,...arr1)
+        }
+        let arr1=[1,'hii',3]     //we can take whole array values as argument using rest method
+        add1(2,'bibin',[2,3,4])
+
+
+// question 10
+console.warn('question10')
+
+
+let person={
+                name:"Bibin",
+                age:22,
+                address:
+                { street:'MTM',
+                landmark:'KTM'}
+            }
+            let {address:{street:place}}=person
+            console.log(place)
+
+// question 11
+console.warn('question11')
+
+let add2=-1
+    let increment=()=> add2=add2+1
+    console.log(increment())
+    console.log(increment())            //to increment on each function call
+    console.log(increment())            
+    console.log(increment())
+
+// question 12
+console.warn('question12')
+
+let url='name=wikipedia&sxsrf=ALiCzsbCNuSz-n8Pq5rh19DudSYj2ToaNA%3A1668055202060&source=hp&ei=ooBsY7SmAY-cseMPoqKAmAU&iflsig=AJiK0e8AAAAAY2yOsmSFZSZXxPvj6Q18DWfiMx0WkDIA&oq=wiki&gs_lcp=Cgdnd3Mtd2l6EAEYATILCAAQsQMQgwEQkQIyCAgAEIAEELEDMggIABCABBCxAzIICAAQgAQQsQMyCwguEIAEELEDEIMBMgsIABCABBCxAxCDATILCAAQgAQQsQMQgwEyCwgAEIAEELEDEIMBMhQILhCABBCxAxCDARDHARDRAxDUAjIFCAAQgAQ6DQguEMcBENEDEOoCECc6BwgjEOoCECc6BwguEOoCECc6BAgjECc6EQguEIAEELEDEIMBEMcBENEDOggILhCDARCxAzoICAAQsQMQkQI6BQgAEJECOggIABCxAxCDAVDCEligJmD8NGgBcAB4AIAB9AGIAdcFkgEFMC4zLjGYAQCgAQGwAQo&sclient=gws-wiz'
+let url_to_object=(a)=> {
+  const result = {}
+  for(const [b,c] of a) {                           // each 'entry' is a [key, value] tupple
+    result[b] = c;
+  }
+  return result;
+}
+    let url_seperate = new URLSearchParams(url);
+    let entry = url_seperate.entries();            //returns an iterator of decoded [key,value] tuples
+    
+    console.log(url_to_object(entry))
+
+
+    
+    </script>
+</body>
+</html>

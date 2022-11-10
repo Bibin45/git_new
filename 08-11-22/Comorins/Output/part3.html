@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+    <h3>Open The Console</h3>
+ 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    
+    <script>
+
+
+// question 1
+console.warn('question1')
+        let person={
+            name:'Bibin',
+            age:22,
+            personal_details:{
+                    blood:'O+',
+                    mobile:'ngl',
+                    district:'kanyakumari'
+            }
+        }
+    for(let each in person){
+        console.log(person[each])
+    }
+
+
+// question2
+console.warn('question2')
+
+
+
+// question 3
+console.warn('question3')
+
+console.warn("Please Update Your Browser")
+
+
+// quetion 4
+console.warn('question4')
+console.error("Invalid Password")
+
+// question 5
+console.warn('question5')
+let p={
+    name:'Bibin',
+    age:22,
+    personal_details:{
+        blood:'O+',
+        mobile:'ngl',
+        district:'kanyakumari'}
+
+}
+
+    console.log(p)
+
+
+// question 6
+console.warn('question6')
+// only take values from 10 to 20
+    let num=(a)=>{
+        try{
+            if(a == "")  throw "is Empty";
+            if(typeof(a)!="number") throw "not a number";
+            if(a > 20)   throw "too high";
+            if(a < 10)  throw "too low";
+            if(a>10 && a<20) throw "correct"
+        }
+        catch(b){
+            console.log('Value '+b)
+        }
+        finally{
+            console.log("Find Again")
+            
+        }
+    }
+num(6)
+num('n')
+num(25)
+num(15)
+
+
+
+// question 7
+console.warn('question7')
+
+var day;
+switch (new Date().getDay()) {
+    case 0:
+        day='Sunday'
+        break
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case  6:
+        day = "Saturday";
+}
+console.log("Today is "+day)
+
+
+// question 8
+console.warn('question8')
+let obj={}
+let obj1={name:"Bibin"}
+
+let empty=(a)=>{                   //function checks the length of object using its keys
+    return console.log(Object.keys(a).length===0);
+}
+
+let empty1=(a)=>{       //using loop checks if there are any keys
+    for(var key in a) {
+        if(a.hasOwnProperty(key))
+            return console.log(false);
+    }
+    return console.log(true);
+}
+
+let empty2=(a)=>{           //if we stringify an object if its empty the output will be {}
+    return console.log(JSON.stringify(a) === '{}')
+}
+
+
+empty(obj)
+empty1(obj)
+empty2(obj)
+
+empty(obj1)
+empty1(obj1)
+empty2(obj1)
+
+
+
+// question 9
+console.warn('question9')
+let array = [2,5,11,20,10];    
+            
+            //use filter() to find value returns in array
+
+let find10 = array.filter(element => element == 10);
+
+console.log(find10) 
+
+
+            //use find() to find a single value 
+
+let find11 = array.find(element => element == 11);
+
+console.log(find11)
+
+            // use to find whether value is in the array or not returns boolean value
+
+const find20 = array.includes(20);
+
+console.log(find20)
+
+            // if the value is inside the array it will return the index number (position)
+
+let find5 = array.findIndex(element => element == 5);
+
+console.log(find5)
+
+    </script>
+
+
+</body>
+</html>

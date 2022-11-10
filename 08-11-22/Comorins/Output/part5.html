@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+    <h3>Open The Console</h3>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+
+        // question 1
+        console.warn('question1')
+
+        let num1=[1,2,3,4,5]
+        let num2=[6,7,8,9,10]
+        let num3=num1.concat(num2)
+
+        console.log(num3)
+
+        let minimum_value=Math.min(...num3)  //checks the minimum value inside the array
+        let maximum_value=Math.max(...num3)
+
+        console.log("Maximum Value : "+maximum_value)
+        console.log("Minimum Value : "+minimum_value)
+
+        // question 2
+        console.warn('question2')
+
+        let fisherman=[
+            {
+                name:'Abin',
+                score:110
+            },
+            {
+                name:'Arun',
+                score:70
+            },
+            {
+                name:'Vijay',
+                score:90
+            },
+            {
+                name:'Surya',
+                score:150
+            },
+        ]
+        var total_score=0;
+        
+        for(let i in fisherman){
+            total_score=total_score+fisherman[i].score
+            }
+        console.log("Total Score : "+total_score)                    //total score
+        
+        var average=Math.floor(total_score/fisherman.length)
+        console.log("Average Score of all Fisherman's : "+average)    //average score
+        
+        var newarray=fisherman.filter(a=>a.score>100)
+        let k=newarray.map(b=>b.name)
+        console.log("High Scored Fisherman's are : "+k)                //high scored names
+      
+
+        // question 3
+        console.warn('question3')
+
+        let string='hello123 hii'
+        let num=string.match(/\d+/g)   //method finds number inside string and takes it out
+        console.log(num)
+
+        // question 4
+        console.warn('question4')
+
+
+    let student=[
+            {
+                name:'Abin',
+                score:110
+            },
+            {
+                name:'Arun',
+                score:70
+            },
+            {
+                name:'Vijay',
+                score:-90
+            },
+            {
+                name:'Surya',
+                score:"150"
+            },
+        ]
+
+    let positive=student.map(a=>a.score>0 )
+    console.log(positive)
+
+    let not_num=student.map(a=>typeof(a.score)!='number' )
+    console.log(not_num)
+
+
+    // question 5
+    console.warn('question5')
+
+    let check=(a,b)=>{if(a>0&&b>0){
+        return "Both are Positive"
+        }
+        if(a>0||b>0){
+        return "One Value is Positive"
+        }
+        else{
+        return "Both are Negative"
+        }
+    }
+    console.log(check(2,3))
+    console.log(check(-5,3))
+    console.log(check(-4,-8))
+    </script>
+
+</body>
+</html>

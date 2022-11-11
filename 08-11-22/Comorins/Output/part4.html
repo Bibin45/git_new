@@ -28,6 +28,23 @@
         // question 2
         console.warn('question2')
 
+        let a=[1,2,3,4,5]
+        let b=12
+        var c;
+        let total=(a,b,c)=>{
+            if(c=="add_front"){
+                a.unshift(b)
+                return a
+            }
+            else if(c=="add_back"){
+            a.push(b)
+            return a
+            }
+        }
+
+    console.log(total(a,b,'add_front'))
+    console.log(total(a,b,'add_back'))
+
 
 
 

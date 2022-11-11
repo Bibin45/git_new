@@ -35,7 +35,33 @@ console.warn('question1')
 // question2
 console.warn('question2')
 
+var myarray=[]
+var arr1=[]
+function create(a){
+    
+        
+    if(a%2==0){
+        var myarray=[]
+        var arr1=[]
+        for(let i=1;i<=a; i++){
+            myarray.push(arr1)
+            arr1.push(i)
+            var k=myarray.lastIndexOf(arr1)
+            
+        }
+        console.log("Last Index of the Array is : "+k)
+        return myarray;
+        
+            
+    }
 
+    else{
+        return "Enter Even Number"
+    }
+}
+console.log(create(2))
+console.log(create(6))
+console.log(create(3))
 
 // question 3
 console.warn('question3')
